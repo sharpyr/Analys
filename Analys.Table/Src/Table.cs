@@ -4,7 +4,7 @@ namespace Analys.Table {
     public T[,] Rows;
 
     public static Table<T> Build(string[] head, T[,] rows) {
-      return new Table<T>() {
+      return new Table<T> {
         Head = head,
         Rows = rows,
       };
