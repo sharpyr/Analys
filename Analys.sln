@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Crostab", "Analys.Crostab\Analys.Crostab.csproj", "{CBF63DD1-0D43-4280-9848-4B892A5A056A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Test", "Analys.Test\Analys.Test.csproj", "{2F149067-0B87-4A9D-98B3-0293DA633682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Table", "Analys.Table\Analys.Table.csproj", "{09AF4641-ED8A-4901-8018-6CE46336FAF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBF63DD1-0D43-4280-9848-4B892A5A056A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF63DD1-0D43-4280-9848-4B892A5A056A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF63DD1-0D43-4280-9848-4B892A5A056A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF63DD1-0D43-4280-9848-4B892A5A056A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F149067-0B87-4A9D-98B3-0293DA633682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F149067-0B87-4A9D-98B3-0293DA633682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F149067-0B87-4A9D-98B3-0293DA633682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F149067-0B87-4A9D-98B3-0293DA633682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09AF4641-ED8A-4901-8018-6CE46336FAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AF4641-ED8A-4901-8018-6CE46336FAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AF4641-ED8A-4901-8018-6CE46336FAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AF4641-ED8A-4901-8018-6CE46336FAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
