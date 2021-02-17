@@ -19,7 +19,7 @@ namespace Analys.Crostab {
     public int Height => this.Rows.Height();
     public int Width => this.Rows.Width();
 
-    public T this[string h, string s] => this.Rows[this.RoIn(h), this.CoIn(s)];
+    public T this[string s, string h] => this.Rows[this.RoIn(s), this.CoIn(h)];
 
     public int CoIn(string h) => Array.IndexOf(this.Head, h);
     public int RoIn(string s) => Array.IndexOf(this.Side, s);
