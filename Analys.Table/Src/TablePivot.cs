@@ -1,6 +1,6 @@
 using System;
 using Analys.Pivot;
-using Spare.Logger;
+using Analys.Types;
 
 namespace Analys.Table {
   public static class TablePivot {

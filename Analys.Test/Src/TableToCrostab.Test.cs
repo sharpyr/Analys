@@ -52,8 +52,8 @@ namespace Analys.Test {
           {3, "Naomi", 78, 8, ""},
         }
       );
-      var (side, head, rows) = table.ToCrostab(PivotPreset.Incre(), "name", "day", "sold");
-      var crostab = Crostab<double>.Build(side, head, rows);
+      var (side, head, rows) = table.ToCrostab(PivotPreset.Average(), "name", "day", "sold");
+      var crostab = Crostab<Average>.Build(side, head, rows).Map(x => x.Value);
       crostab.Side.Deco().Logger();
       crostab.Head.Deco().Logger();
       crostab.Rows.Deco().Logger();
