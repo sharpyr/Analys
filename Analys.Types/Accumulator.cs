@@ -1,19 +1,7 @@
 using System.Collections.Generic;
 using Generic.Math;
 
-namespace Analys.Table {
-  public enum Accumulated {
-    Merge,
-    Accum,
-    Incre,
-    Count,
-    Average,
-    Max,
-    Min,
-    First,
-    Last
-  }
-
+namespace Analys.Types {
   public static class Accumulator<T> {
     public static List<T> Merge(List<T> target, List<T> value) {
       if (value == null) return target;
@@ -37,9 +25,12 @@ namespace Analys.Table {
   public static class Accumulator {
     public static object Incre(object target, object value) => GenericMath.Add(target, value);
     public static int Count(int target, object value) => ++target;
-    public static (object sum, int count) Average((object sum, int count) target, object value) => (GenericMath.Add(target.sum, value), ++target.count);
-    public static object Max(object target, object value) => GenericMath.GreaterThanOrEqual(target, value) ? target : value;
-    public static object Min(object target, object value) => GenericMath.LessThanOrEqual(target, value) ? target : value;
+    public static (object sum, int count) Average((object sum, int count) target, object value) =>
+      (GenericMath.Add(target.sum, value), ++target.count);
+    public static object Max(object target, object value) =>
+      GenericMath.GreaterThanOrEqual(target, value) ? target : value;
+    public static object Min(object target, object value) =>
+      GenericMath.LessThanOrEqual(target, value) ? target : value;
     public static object First(object target, object value) => target ?? value;
     public static object Last(object target, object value) => value ?? target;
   }

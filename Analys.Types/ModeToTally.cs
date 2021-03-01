@@ -1,6 +1,4 @@
-using System;
-
-namespace Analys.Table {
+namespace Analys.Types {
   public static class ModeToTally<T, TK> {
     // public static Func<object, object, object> ModeToAccumulator(Accumulated mode) {
     //   switch (mode) {

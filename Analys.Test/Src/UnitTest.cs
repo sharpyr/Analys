@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Spare.Logger;
 
 namespace Analys.Test {
   public class Tests {
@@ -7,6 +8,9 @@ namespace Analys.Test {
 
     [Test]
     public void Test1() {
+      (default(string[])?.ToString() ?? "null").Logger();
+      default(double).Logger();
+      default(int).Logger();
       Assert.Pass();
     }
   }

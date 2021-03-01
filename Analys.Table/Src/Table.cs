@@ -5,6 +5,8 @@ using Veho.Matrix.Columns;
 using Veho.Matrix.Rows;
 
 namespace Analys.Table {
+  public class Table : Table<object> { }
+
   public class Table<T> {
     public string[] Head;
     public T[,] Rows;

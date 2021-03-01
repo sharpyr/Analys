@@ -7,9 +7,12 @@
         <PackageReference Include="NUnit" Version="3.12.0" />
         <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+        <PackageReference Include="Spare.Deco" Version="0.1.3" />
+        <PackageReference Include="Spare.Logger" Version="0.1.3" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj" />
       <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
+      <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
     </ItemGroup>
 </Project>

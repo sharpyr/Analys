@@ -2,4 +2,11 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/home/hazen/.nuget/packages/generic.math/1.0.2/lib/netstandard1.3/Generic.Math.dll" /&gt;
   &lt;Assembly Path="/snap/dotnet-sdk/current/packs/Microsoft.NETCore.App.Ref/5.0.0/ref/net5.0/System.Data.Common.dll" /&gt;
-&lt;/AssemblyExplorer&gt;</s:String></wpf:ResourceDictionary>
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a2c51313_002D58fd_002D467f_002Dbeb2_002D49a2bb606e73/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.Tests.Test1&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.TableToCrostabTest.SimpleTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.TableToCrostabTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
