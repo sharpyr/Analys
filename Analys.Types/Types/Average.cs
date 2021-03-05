@@ -1,12 +1,4 @@
-﻿using System;
-
-namespace Analys.Types {
-  public static class PivotExt { }
-
-  public static class Factory<T> {
-    public static Func<T[]> Vector => () => new T[] { };
-  }
-
+﻿namespace Analys.Types {
   public struct Average {
     public double Sum { get; set; }
     public int Count { get; set; }

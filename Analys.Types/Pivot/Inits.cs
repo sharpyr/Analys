@@ -1,6 +1,8 @@
 ﻿using System;
+using Analys.Types;
+using Analys.Utils;
 
-namespace Analys.Types {
+namespace Analys.Pivot {
   public static class Inits {
     public static Func<T[]> Merge<T>() => Factory<T>.Vector;
     public static Func<T[]> Accum<T>() => Factory<T>.Vector;

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Linq;
+using Analys.Types;
 using Veho.Vector;
 
-namespace Analys.Types {
+namespace Analys.Pivot {
   public static class Accumulators {
     public static Func<T[], T[], T[]> Merge<T>() => (target, value) => value == null ? target : target.Concat(value).ToArray();
     public static Func<T[], T, T[]> Accum<T>() => (target, value) => value == null ? target : target.Push(value);

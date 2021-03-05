@@ -1,7 +1,8 @@
 ﻿using System;
+using Analys.Types;
 
-namespace Analys.Types {
-  public static class PivotPreset {
+namespace Analys.Pivot {
+  public static class Presets {
     public static (Func<T[]> init, Func<T[], T[], T[]> accum) Merge<T>() => (Inits.Merge<T>(), Accumulators.Merge<T>());
     public static (Func<T[]> init, Func<T[], T, T[]> accum) Accum<T>() => (Inits.Accum<T>(), Accumulators.Accum<T>());
     public static (Func<int> init, Func<int, int, int> accum) Count() => (Inits.Count(), Accumulators.Count());

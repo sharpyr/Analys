@@ -1,9 +1,10 @@
 ﻿using System;
+using Analys.Pivot;
 using Analys.Types;
 using Typen;
 using Veho.Matrix;
 using Veho.Vector;
-using Inits = Analys.Types.Inits;
+using Inits = Analys.Pivot.Inits;
 
 namespace Analys {
   public class Pivot<T, TP> {
