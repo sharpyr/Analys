@@ -3,7 +3,6 @@ using Analys.Pivot;
 using Analys.Types;
 using Typen;
 using Veho.Matrix;
-using Veho.Vector;
 
 namespace Analys {
   public class Pivot<T, TP> : DataGram<TP> {

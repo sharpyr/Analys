@@ -4,10 +4,14 @@ using Veho.Vector;
 
 namespace Analys {
   public class DataGram<T> {
-    protected string[] Side;
-    protected string[] Head;
-    protected T[][] Rows;
+    public string[] Side;
+    public string[] Head;
+    public T[][] Rows;
     protected Func<T> Init;
+    
+    // public DataGram<T>(string[] side, string[] head, T[][] rows, Func<T> init) {
+    //   
+    // }
     public static DataGram<T> Build(Func<T> init) => new DataGram<T> {
       Side = new string[] { },
       Head = new string[] { },
@@ -26,15 +30,5 @@ namespace Analys {
       Ext.PushColumn(ref this.Rows, Vec.Init(this.Rows.Height(), i => this.Init()));
       return ci + Vec.Push(ref this.Head, y);
     }
-    public (string[] side, string[] head, T[,] rows) ToTuple() => (
-      this.Side,
-      this.Head,
-      this.Rows.NestToMatrix()
-    );
-    public (string[] side, string[] head, TO[,] rows) ToTuple<TO>() => (
-      this.Side,
-      this.Head,
-      this.Rows.NestToMatrix().CastTo<T, TO>()
-    );
   }
 }

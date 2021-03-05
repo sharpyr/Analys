@@ -29,11 +29,12 @@ namespace Analys.Test {
         }
       );
       // var (side, head, rows) = table.ToCrostab(PivotPreset.Average(), "name", "day", "sold");
-      var crostab = table.ToCrostab<Average>(
+      var crostab = table.ToCrostab<double>(
         "name",
         "day",
         "sold",
-        PivotMode.Average
+        PivotMode.Average,
+        x => x.Value
       );
       // rows.Deco().Logger();
       // var crostab = Crostab<Average>.Build(side, head, rows).Map(x => x.Value);
