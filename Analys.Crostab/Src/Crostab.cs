@@ -10,17 +10,11 @@ namespace Analys {
     };
   }
 
-  public class Crostab<T> {
+  public partial class Crostab<T> {
     public string[] Side;
     public string[] Head;
     public T[,] Rows;
 
-    public static Crostab<T> Build(string[] side, string[] head, T[,] rows) =>
-      new Crostab<T> {
-        Side = side,
-        Head = head,
-        Rows = rows,
-      };
 
     public (int height, int width) Size => this.Rows.Size();
     public int Height => this.Rows.Height();

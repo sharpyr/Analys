@@ -1,5 +1,4 @@
 ﻿using Analys.Types;
-using Analys.Utils;
 using NUnit.Framework;
 using Spare.Deco;
 using Spare.Logger;
@@ -30,9 +29,14 @@ namespace Analys.Test {
         }
       );
       // var (side, head, rows) = table.ToCrostab(PivotPreset.Average(), "name", "day", "sold");
-      var (side, head, rows) = table
-        .ToCrostab<Average>("name", "day", "sold", PivotMode.Average);
-      var crostab = Crostab<Average>.Build(side, head, rows).Map(x => x.Value);
+      var crostab = table.ToCrostab<Average>(
+        "name",
+        "day",
+        "sold",
+        PivotMode.Average
+      );
+      // rows.Deco().Logger();
+      // var crostab = Crostab<Average>.Build(side, head, rows).Map(x => x.Value);
       crostab.Side.Deco().Logger();
       crostab.Head.Deco().Logger();
       crostab.Rows.Deco().Logger();

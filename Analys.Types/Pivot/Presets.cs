@@ -2,6 +2,23 @@
 using Analys.Types;
 
 namespace Analys.Pivot {
+  public static class PivotExt {
+    public static (dynamic init, dynamic accum) ModeToPreset(this PivotMode mode) {
+      switch (mode) {
+        case PivotMode.Accum: return Presets.Accum<dynamic>();
+        case PivotMode.Merge: return Presets.Accum<dynamic>();
+        case PivotMode.Count: return Presets.Count();
+        case PivotMode.Incre: return Presets.Incre();
+        case PivotMode.Max: return Presets.Max();
+        case PivotMode.Min: return Presets.Min();
+        case PivotMode.First: return Presets.First();
+        case PivotMode.Last: return Presets.Last();
+        case PivotMode.Average: return Presets.Average();
+        default: throw new ArgumentOutOfRangeException(nameof(mode), mode, "Invalid PivotMode");
+      }
+    }
+  }
+
   public static class Presets {
     public static (Func<T[]> init, Func<T[], T[], T[]> accum) Merge<T>() => (Inits.Merge<T>(), Accumulators.Merge<T>());
     public static (Func<T[]> init, Func<T[], T, T[]> accum) Accum<T>() => (Inits.Accum<T>(), Accumulators.Accum<T>());
