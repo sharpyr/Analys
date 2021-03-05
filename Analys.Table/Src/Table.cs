@@ -1,22 +1,24 @@
 using System;
-using System.Data;
 using Veho.Matrix;
 using Veho.Matrix.Columns;
 using Veho.Matrix.Rows;
 
 namespace Analys.Table {
-  public class Table : Table<object> { }
+  public class Table : Table<object> {
+    public new static Table Build(string[] head, object[,] rows) => new Table {
+      Head = head,
+      Rows = rows,
+    };
+  }
 
   public class Table<T> {
     public string[] Head;
     public T[,] Rows;
 
-    public static Table<T> Build(string[] head, T[,] rows) {
-      return new Table<T> {
-        Head = head,
-        Rows = rows,
-      };
-    }
+    public static Table<T> Build(string[] head, T[,] rows) => new Table<T> {
+      Head = head,
+      Rows = rows,
+    };
 
     public (int height, int width) Size => this.Rows.Size();
     public int Height => this.Rows.Height();
