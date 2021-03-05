@@ -12,12 +12,12 @@ namespace Analys {
     public static Crostab<TO> ToCrostab<T, TO>(this DataGram<T> dataGram) => Crostab<TO>.Build(
       dataGram.Side,
       dataGram.Head,
-      dataGram.Rows.NestToMatrix().Map(Conv.Cast<T, TO>)
+      dataGram.Rows.NestToMatrix<T, TO>()
     );
     public static Crostab<TO> ToCrostab<T, TO>(this DataGram<T> dataGram, Func<T, TO> func) => Crostab<TO>.Build(
       dataGram.Side,
       dataGram.Head,
-      dataGram.Rows.NestToMatrix().Map(func)
+      dataGram.Rows.NestToMatrix(func)
     );
   }
 

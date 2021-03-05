@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.0.6</PackageVersion>
+    <PackageVersion>0.0.7</PackageVersion>
     <Title>Analys.Crostab</Title>
     <Description>Cross-table class</Description>
     <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
@@ -10,18 +10,20 @@
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.0.6</AssemblyVersion>
-    <FileVersion>0.0.6</FileVersion>
+    <AssemblyVersion>0.0.7</AssemblyVersion>
+    <FileVersion>0.0.7</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Analys</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Generic.Math" Version="1.0.2" />
-    <PackageReference Include="Veho.Matrix" Version="0.1.9" />
-    <PackageReference Include="Veho.Vector" Version="0.1.9" />
+    <PackageReference Include="Generic.Math" Version="1.0.2"/>
+    <PackageReference Include="Veho.Matrix" Version="0.1.10"/>
+    <PackageReference Include="Veho.Vector" Version="0.1.10"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
-    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
+    <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj"/>
+    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj"/>
+    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
+    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
   </ItemGroup>
 </Project>

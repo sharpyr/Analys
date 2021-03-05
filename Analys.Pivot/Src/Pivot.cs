@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Analys.Pivot;
 using Analys.Types;
 using Typen;
@@ -49,7 +50,7 @@ namespace Analys {
       var row = Rows[x];
       return row[y] = _accum(row[y], value);
     }
-    private TP Note(object[] sample) {
+    private TP Note(IReadOnlyList<object> sample) {
       var side = sample[_sideIndex].ToString();
       var head = sample[_headIndex].ToString();
       var value = sample[_fieldIndex].Cast<object, T>();
