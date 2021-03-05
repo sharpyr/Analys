@@ -1,4 +1,4 @@
-namespace Analys.Pivot {
+namespace Analys {
   public class Cubic {
     
   }

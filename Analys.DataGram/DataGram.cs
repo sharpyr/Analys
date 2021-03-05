@@ -2,7 +2,7 @@
 using Veho.Matrix;
 using Veho.Vector;
 
-namespace Analys.DataGram {
+namespace Analys {
   public class DataGram<T> {
     public string[] Side;
     public string[] Head;
@@ -30,6 +30,11 @@ namespace Analys.DataGram {
       this.Side,
       this.Head,
       this.Rows.NestToMatrix()
+    );
+    public (string[] side, string[] head, TO[,] rows) ToTuple<TO>() => (
+      this.Side,
+      this.Head,
+      this.Rows.NestToMatrix().CastTo<T, TO>()
     );
   }
 }

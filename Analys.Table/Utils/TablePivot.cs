@@ -1,8 +1,7 @@
 using System;
-using Analys.Pivot;
 using Analys.Types;
 
-namespace Analys.Table {
+namespace Analys.Utils {
   public static class TablePivot {
     public static (string[] side, string[] head, TP[,] rows) ToCrostab<T, TP>(
       this Table<object> table,
@@ -19,19 +18,19 @@ namespace Analys.Table {
       return pivot.ToTuple();
     }
 
-    // public static (string[] side, string[] head, TP[,] rows) ToCrostab<T, TP>(
-    //   this Table table,
-    //   string side,
-    //   string head,
-    //   string field,
-    //   PivotMode mode
-    // ) {
-    //   var sideIndex = table.CoIn(side);
-    //   var headIndex = table.CoIn(head);
-    //   var fieldIndex = table.CoIn(field);
-    //   var pivot = Pivot<T, TP>.Build(sideIndex, headIndex, fieldIndex, mode);
-    //   pivot.Record(table.Rows);
-    //   return pivot.ToTuple();
-    // }
+    public static (string[] side, string[] head, TP[,] rows) ToCrostab<TP>(
+      this Table table,
+      string side,
+      string head,
+      string field,
+      PivotMode mode
+    ) {
+      var sideIndex = table.CoIn(side);
+      var headIndex = table.CoIn(head);
+      var fieldIndex = table.CoIn(field);
+      var pivot = Pivot<dynamic, dynamic>.Build(sideIndex, headIndex, fieldIndex, mode);
+      pivot.Record(table.Rows);
+      return pivot.ToTuple<TP>();
+    }
   }
 }

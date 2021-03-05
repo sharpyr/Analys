@@ -3,7 +3,7 @@ using Veho.Matrix;
 using Veho.Matrix.Columns;
 using Veho.Matrix.Rows;
 
-namespace Analys.Table {
+namespace Analys {
   public class Table : Table<object> {
     public new static Table Build(string[] head, object[,] rows) => new Table {
       Head = head,

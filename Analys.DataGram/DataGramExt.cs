@@ -1,7 +1,7 @@
 using Veho.Matrix;
 using Veho.Vector;
 
-namespace Analys.DataGram {
+namespace Analys {
   public static class Ext {
     public static T[][] PushRow<T>(this T[][] matrix, T[] row) =>
       matrix.Push(row);
