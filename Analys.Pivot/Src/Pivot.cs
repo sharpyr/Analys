@@ -35,12 +35,14 @@ namespace Analys {
       }
       return this;
     }
-    public Pivot<T, TP> Record(object[,] samples) {
+
+    public Pivot<T, TP> Record(object[,] samples, Func<object, T> conv = null) {
+      if (conv == null) conv = Conv.Cast<object, T>;
       for (int i = 0, h = samples.Height(); i < h; i++) {
         var side = samples[i, _sideIndex].ToString();
         var head = samples[i, _headIndex].ToString();
-        var value = samples[i, _fieldIndex].Cast<object, T>();
-        this.Note(head, side, value);
+        var value = samples[i, _fieldIndex];
+        this.Note(head, side, conv(value));
       }
       return this;
     }

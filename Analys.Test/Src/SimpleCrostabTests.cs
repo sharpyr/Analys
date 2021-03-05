@@ -34,6 +34,7 @@ namespace Analys.Test {
         "day",
         "sold",
         PivotMode.Average,
+        null,
         x => x.Value
       );
       // rows.Deco().Logger();

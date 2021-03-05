@@ -1,4 +1,5 @@
 ﻿using System;
+using Typen;
 using Veho.Matrix;
 
 namespace Analys {
@@ -8,15 +9,10 @@ namespace Analys {
       dataGram.Head,
       dataGram.Rows.NestToMatrix()
     );
-    public static Crostab<TO> ToCrostab<T, TO>(this DataGram<T> dataGram) => Crostab<TO>.Build(
+    public static Crostab<TO> ToCrostab<T, TO>(this DataGram<T> dataGram, Func<T, TO> func = null) => Crostab<TO>.Build(
       dataGram.Side,
       dataGram.Head,
-      dataGram.Rows.NestToMatrix<T, TO>()
-    );
-    public static Crostab<TO> ToCrostab<T, TO>(this DataGram<T> dataGram, Func<T, TO> func) => Crostab<TO>.Build(
-      dataGram.Side,
-      dataGram.Head,
-      dataGram.Rows.NestToMatrix(func)
+      dataGram.Rows.NestToMatrix(func ?? Conv.Cast<T, TO>)
     );
   }
 

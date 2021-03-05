@@ -20,7 +20,10 @@ namespace Analys {
     public int Height => this.Rows.Height();
     public int Width => this.Rows.Width();
 
-    public T this[string s, string h] => this.Rows[this.RoIn(s), this.CoIn(h)];
+    public T this[string s, string h] {
+      get => this.Rows[this.RoIn(s), this.CoIn(h)];
+      set => this.Rows[this.RoIn(s), this.CoIn(s)] = value;
+    }
 
     public int RoIn(string s) => Array.IndexOf(this.Side, s);
     public int CoIn(string h) => Array.IndexOf(this.Head, h);
