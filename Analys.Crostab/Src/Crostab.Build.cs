@@ -1,5 +1,4 @@
 ﻿using System;
-using Typen;
 using Veho.Matrix;
 
 namespace Analys {
