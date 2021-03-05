@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageVersion>0.0.6</PackageVersion>
-    <Title>Analys.Types</Title>
-    <Description>Types and Enums for Analys</Description>
+    <Title>Analys</Title>
+    <Description>Table and Cross-table</Description>
     <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
@@ -15,8 +15,10 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Generic.Math" Version="1.0.2"/>
-    <PackageReference Include="Typen" Version="0.0.8"/>
-    <PackageReference Include="Veho.Vector" Version="0.1.9"/>
+    <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj"/>
+    <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj"/>
+    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj"/>
+    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
+    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
   </ItemGroup>
 </Project>

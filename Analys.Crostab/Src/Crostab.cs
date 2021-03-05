@@ -2,7 +2,13 @@ using System;
 using Veho.Matrix;
 
 namespace Analys.Crostab {
-  public class Crostab : Crostab<object> { }
+  public class Crostab : Crostab<object> {
+    public new static Crostab Build(string[] side, string[] head, object[,] rows) => new Crostab {
+      Side = side,
+      Head = head,
+      Rows = rows
+    };
+  }
 
   public class Crostab<T> {
     public string[] Side;
@@ -25,7 +31,9 @@ namespace Analys.Crostab {
     public int RoIn(string s) => Array.IndexOf(this.Side, s);
     public int CoIn(string h) => Array.IndexOf(this.Head, h);
 
-    public Crostab<TO> Map<TO>(Func<T, TO> fn) => Crostab<TO>.Build((string[]) this.Side.Clone(), (string[]) this.Head.Clone(), this.Rows.Map(fn));
-    public Crostab<TO> CastTo<TO>() => Crostab<TO>.Build((string[]) this.Side.Clone(), (string[]) this.Head.Clone(), this.Rows.CastTo<T, TO>());
+    public Crostab<TO> Map<TO>(Func<T, TO> fn) =>
+      Crostab<TO>.Build((string[]) this.Side.Clone(), (string[]) this.Head.Clone(), this.Rows.Map(fn));
+    public Crostab<TO> CastTo<TO>() => Crostab<TO>.Build((string[]) this.Side.Clone(), (string[]) this.Head.Clone(),
+      this.Rows.CastTo<T, TO>());
   }
 }
