@@ -45,15 +45,15 @@ namespace Analys {
         body.Rows = body.Rows.Fluo(orient, presets.Value, effects);
       }
       var (head, line, rows) = (body.Head, body.Rows).Padder(hasAnsi);
-      var lines = new[] {
+      var lines = Vec.From(
         head.Join(" | "),
         line.Join(" + ")
-      }.Concat(
+      ).Acquire(
         rows.MapRows(row => row.Join(" | "))
-      ).ToArray();
+      );
       return lines.Map(x => t + x).Join(LF);
     }
-    
+
     public static string Deco<T>(
       this Crostab<T> crostab,
       byte tab = 1,
@@ -66,17 +66,21 @@ namespace Analys {
       var t = new string(' ', tab * 2);
       var body = crostab.Map(Conv.ToStr);
       if (presets.HasValue && (hasAnsi = true)) {
+        body.Side = body.Side.Fluo(presets.Value, effects);
         body.Head = body.Head.Fluo(presets.Value, effects);
         body.Rows = body.Rows.Fluo(orient, presets.Value, effects);
       }
       var (title, hr, side) = (body.Title, body.Side).Padder(hasAnsi);
       var (head, line, rows) = (body.Head, body.Rows).Padder(hasAnsi);
-      var lines = new[] {
-        head.Join(" | "),
-        line.Join(" + ")
-      }.Concat(
-        rows.MapRows(row => row.Join(" | "))
-      ).ToArray();
+      var lines = Vec.From(
+        title + " | " + head.Join(" | "),
+        hr + " + " + line.Join(" + ")
+      ).Acquire(
+        side.Zip(
+          rows.MapRows(row => row.Join(" | ")),
+          (s, r) => s + " | " + r
+        )
+      );
       return lines.Map(x => t + x).Join(LF);
     }
   }
