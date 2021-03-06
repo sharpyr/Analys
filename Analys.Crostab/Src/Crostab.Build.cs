@@ -22,5 +22,10 @@ namespace Analys {
       Head = head,
       Rows = rows,
     };
+    public static Crostab<T> Build(string[] side, string[] head) => new Crostab<T> {
+      Side = side,
+      Head = head,
+      Rows = (side.Length, head.Length).Init<T>((i, j) => default),
+    };
   }
 }
