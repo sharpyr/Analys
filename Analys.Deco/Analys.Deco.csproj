@@ -16,6 +16,7 @@
         <RootNamespace>Analys</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
+      <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj" />
       <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
     </ItemGroup>
     <ItemGroup>

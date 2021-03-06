@@ -12,6 +12,7 @@
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj" />
+      <ProjectReference Include="..\Analys.Deco\Analys.Deco.csproj" />
       <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
       <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
     </ItemGroup>
