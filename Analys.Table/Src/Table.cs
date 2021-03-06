@@ -8,11 +8,6 @@ namespace Analys {
     public string[] Head;
     public T[,] Rows;
 
-    public static Table<T> Build(string[] head, T[,] rows) => new Table<T> {
-      Head = head,
-      Rows = rows,
-    };
-
     public (int height, int width) Size => this.Rows.Size();
     public int Height => this.Rows.Height();
     public int Width => this.Rows.Width();

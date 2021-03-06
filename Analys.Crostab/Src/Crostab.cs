@@ -2,13 +2,7 @@ using System;
 using Veho.Matrix;
 
 namespace Analys {
-  public class Crostab : Crostab<object> {
-    public new static Crostab Build(string[] side, string[] head, object[,] rows) => new Crostab {
-      Side = side,
-      Head = head,
-      Rows = rows
-    };
-  }
+
 
   public partial class Crostab<T> {
     public string[] Side;
@@ -21,7 +15,7 @@ namespace Analys {
 
     public T this[string s, string h] {
       get => this.Rows[this.RoIn(s), this.CoIn(h)];
-      set => this.Rows[this.RoIn(s), this.CoIn(s)] = value;
+      set => this.Rows[this.RoIn(s), this.CoIn(h)] = value;
     }
 
     public int RoIn(string s) => Array.IndexOf(this.Side, s);
