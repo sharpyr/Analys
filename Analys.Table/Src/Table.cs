@@ -4,14 +4,7 @@ using Veho.Matrix.Columns;
 using Veho.Matrix.Rows;
 
 namespace Analys {
-  public class Table : Table<object> {
-    public new static Table Build(string[] head, object[,] rows) => new Table {
-      Head = head,
-      Rows = rows,
-    };
-  }
-
-  public class Table<T> {
+  public partial class Table<T> {
     public string[] Head;
     public T[,] Rows;
 

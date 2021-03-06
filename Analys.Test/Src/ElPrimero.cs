@@ -4,8 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using NUnit.Framework;
-using Veho.Enumerable;
-using Veho.Matrix;
 using Veho.Vector;
 
 namespace Analys.Test {
@@ -18,7 +16,7 @@ namespace Analys.Test {
       var eta = new Stopwatch();
       foreach (var m in methods)
         try { table[0, m.Key] = eta.Profile(iteration, m.Key, m.Value); }
-        catch (Exception e) { table[0, m.Key] = double.NaN; }
+        catch (Exception) { table[0, m.Key] = double.NaN; }
       return table;
     }
     public static (Crostab<double> elapsed, Crostab<TO> result) Strategies<T, TO>(
@@ -31,7 +29,7 @@ namespace Analys.Test {
       foreach (var m in methods)
         foreach (var p in parameters)
           try { (elapsed[p.Key, m.Key], result[p.Key, m.Key]) = eta.Profile(iteration, m, p); }
-          catch (Exception e) { elapsed[p.Key, m.Key] = double.NaN; }
+          catch (Exception) { elapsed[p.Key, m.Key] = double.NaN; }
       return (elapsed, result);
     }
   }
