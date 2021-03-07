@@ -9,9 +9,9 @@ namespace Analys {
       string head,
       string field,
       Pivoted mode,
-      Func<object, dynamic> parser = null,
-      Func<dynamic, TO> formula = null
-    ) => Pivot<dynamic, dynamic>
+      Func<dynamic, TO> formula = null,
+      Func<object, dynamic> parser = null
+    ) => Pivot<dynamic, dynamic, dynamic>
       .Build(table.CoIn(side), table.CoIn(head), table.CoIn(field), mode)
       .Record(table.Rows, parser)
       .ToCrostab(formula);

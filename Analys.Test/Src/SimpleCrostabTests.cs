@@ -1,6 +1,8 @@
-﻿using Analys.Types;
+﻿using System;
+using Analys.Types;
 using NUnit.Framework;
 using Spare.Logger;
+using Typen.Numeral;
 using static System.Double;
 using static Palett.Presets;
 
@@ -30,20 +32,36 @@ namespace Analys.Test {
         }
       );
       // var (side, head, rows) = table.ToCrostab(PivotPreset.Average(), "name", "day", "sold");
-      var crostab = table.ToCrostab<double>(
-        "name",
-        "day",
-        "sold",
-        Pivoted.Average,
-        null,
-        x => x.Value
-      );
-      // rows.Deco().Logger();
-      // var crostab = Crostab<Average>.Build(side, head, rows).Map(x => x.Value);
-      // crostab.Side.Deco().Logger();
-      // crostab.Head.Deco().Logger();
-      // crostab.Rows.Deco().Logger();
-      crostab.Deco(presets: (Subtle, Fresh)).Logger();
+      {
+        var crostab = table.ToCrostab<double>(
+          "name",
+          "day",
+          "sold",
+          Pivoted.Average,
+          x => x.Value
+        );
+        crostab.Deco(presets: (Subtle, Fresh)).LogNext();
+      }
+      {
+        var crostab = table.ToCrostab<double>(
+          "name",
+          "day",
+          "sold",
+          Pivoted.Sum,
+          null,
+          o => o.CastDouble()
+        );
+        crostab.Deco(presets: (Subtle, Fresh)).LogNext();
+      }
+      {
+        var crostab = table.ToCrostab<double>(
+          "name",
+          "day",
+          "sold",
+          Pivoted.Count
+        );
+        crostab.Deco(presets: (Subtle, Fresh)).LogNext();
+      }
     }
   }
 }

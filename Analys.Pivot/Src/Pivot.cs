@@ -6,21 +6,22 @@ using Typen;
 using Veho.Matrix;
 
 namespace Analys {
-  public class Pivot<T, TP> : DataGram<TP> {
+  public class Pivot<TA, T, TP> : DataGram<TP> {
     private int _sideIndex;
     private int _headIndex;
     private int _fieldIndex;
     private Func<TP, T, TP> _accum;
+    private Func<TA, T> _conv;
 
-    public static Pivot<dynamic, dynamic> Build(int side, int head, int field, Pivoted mode) {
+
+    public static Pivot<dynamic, dynamic, dynamic> Build(int side, int head, int field, Pivoted mode) {
       var (init, accum, conv) = mode.ModeToPreset();
-      return new Pivot<dynamic, dynamic> {
+      return new Pivot<dynamic, dynamic, dynamic> {
         _sideIndex = side,
         _headIndex = head,
         _fieldIndex = field,
-        _accum = conv == null
-          ? (Func<dynamic, dynamic, dynamic>) ((target, value) => accum(target, value))
-          : (target, value) => accum(target, conv(value)),
+        _accum = (target, value) => accum(target, value),
+        _conv = some => conv(some),
         Init = () => init(),
         Side = new string[] { },
         Head = new string[] { },
@@ -28,26 +29,27 @@ namespace Analys {
       };
     }
 
-    public Pivot<T, TP> Record(T[,] samples) {
+    public Pivot<TA, T, TP> Record(TA[,] samples, Func<TA, T> conv = null) {
+      if (conv == null) conv = _conv ?? Conv.Cast<TA, T>;
       for (int i = 0, h = samples.Height(); i < h; i++) {
         var side = samples[i, _sideIndex].ToString();
         var head = samples[i, _headIndex].ToString();
-        var value = samples[i, _fieldIndex];
+        var value = conv(samples[i, _fieldIndex]);
         this.Note(head, side, value);
       }
       return this;
     }
 
-    public Pivot<T, TP> Record(object[,] samples, Func<object, T> conv = null) {
-      if (conv == null) conv = Conv.Cast<object, T>;
-      for (int i = 0, h = samples.Height(); i < h; i++) {
-        var side = samples[i, _sideIndex].ToString();
-        var head = samples[i, _headIndex].ToString();
-        var value = samples[i, _fieldIndex];
-        this.Note(head, side, conv(value));
-      }
-      return this;
-    }
+    // public Pivot<T, TP> Record(object[,] samples, Func<object, T> conv = null) {
+    //   if (conv == null) conv = Conv.Cast<object, T>;
+    //   for (int i = 0, h = samples.Height(); i < h; i++) {
+    //     var side = samples[i, _sideIndex].ToString();
+    //     var head = samples[i, _headIndex].ToString();
+    //     var value = samples[i, _fieldIndex];
+    //     this.Note(head, side, conv(value));
+    //   }
+    //   return this;
+    // }
     private TP Note(string head, string side, T value) {
       var x = this.IndexSide(side);
       var y = this.IndexHead(head);

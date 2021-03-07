@@ -23,7 +23,7 @@ namespace Analys.Pivot {
   public static class Presets {
     public static (Func<T[]> init, Func<T[], T[], T[]> accum, Func<T[], T[], T[]>conv) Merge<T>() => (Inits.Merge<T>(), Accumulators.Merge<T>(), null);
     public static (Func<T[]> init, Func<T[], T, T[]> accum, Func<T, T, T[]> conv) Accum<T>() => (Inits.Accum<T>(), Accumulators.Accum<T>(), null);
-    public static (Func<int> init, Func<int, int, int> accum, Func<T, int> conv) Count<T>() => (Inits.Count(), Accumulators.Count(), null);
+    public static (Func<int> init, Func<int, double, int> accum, Func<T, double> conv) Count<T>() => (Inits.Count(), Accumulators.Count(), Num.CastDouble);
     public static (Func<double> init, Func<double, double, double>accum, Func<T, double> conv) Sum<T>() => (Inits.Sum(), Accumulators.Sum(), Num.CastDouble);
     public static (Func<Average> init, Func<Average, double, Average>accum, Func<T, double> conv) Average<T>() => (Inits.Average(), Accumulators.Average(), Num.CastDouble);
     public static (Func<double> init, Func<double, double, double>accum, Func<T, double> conv) Max<T>() => (Inits.Max(), Accumulators.Max(), Num.CastDouble);
