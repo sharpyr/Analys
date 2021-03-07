@@ -9,7 +9,7 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
         <PackageReference Include="Spare.Deco" Version="0.1.3" />
         <PackageReference Include="Spare.Logger" Version="0.1.3" />
-        <PackageReference Include="Veho.Dictionary" Version="0.1.15" />
+        <PackageReference Include="Veho.Dictionary" Version="0.1.17" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj" />
