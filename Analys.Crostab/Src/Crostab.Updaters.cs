@@ -14,6 +14,11 @@ namespace Analys {
       this.Rows = this.Rows.PushRow(vec);
       return this;
     }
+    public Crostab<T> UnshiftRow(string label, T[] vec) {
+      this.Side = this.Side.Unshift(label);
+      this.Rows = this.Rows.UnshiftRow(vec);
+      return this;
+    }
     public Crostab<T> WriteColumn(string label, T[] vec) {
       var j = this.CoIn(label);
       this.Rows.WriteColumn(vec, j);
@@ -22,6 +27,11 @@ namespace Analys {
     public Crostab<T> PushColumn(string label, T[] vec) {
       this.Head = this.Head.Push(label);
       this.Rows = this.Rows.PushColumn(vec);
+      return this;
+    }
+    public Crostab<T> UnshiftColumn(string label, T[] vec) {
+      this.Head = this.Head.Unshift(label);
+      this.Rows = this.Rows.UnshiftColumn(vec);
       return this;
     }
   }
