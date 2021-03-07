@@ -1,8 +1,6 @@
-﻿using System.Linq;
-using Palett.Fluos;
+﻿using Palett.Fluos;
 using Palett.Types;
 using Spare.Padder;
-using Texting.Lange;
 using Typen;
 using Veho.Matrix;
 using Veho.Matrix.Rows;

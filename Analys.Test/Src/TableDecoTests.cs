@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Palett.Presets;
 using Spare.Logger;
+using static Palett.Presets;
 
 namespace Analys.Test {
   [TestFixture]
@@ -14,7 +14,7 @@ namespace Analys.Test {
           {2, "Faraday", 120},
           {3, "BYD", 1250}
         });
-      table.Deco(presets: (PresetCollection.Planet, PresetCollection.Fresh)).Logger();
+      table.Deco(presets: (Planet, Fresh)).Logger();
     }
 
     [Test]
@@ -27,7 +27,7 @@ namespace Analys.Test {
           {2, "Faraday", 120},
           {3, "BYD", 1250}
         });
-      table.Deco(tab: 2, presets: (PresetCollection.Planet, PresetCollection.Fresh)).Logger();
+      table.Deco(tab: 2, presets: (Planet, Fresh)).Logger();
     }
   }
 }

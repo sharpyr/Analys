@@ -2,8 +2,6 @@ using System;
 using Veho.Matrix;
 
 namespace Analys {
-
-
   public partial class Crostab<T> {
     public string[] Side;
     public string[] Head;
