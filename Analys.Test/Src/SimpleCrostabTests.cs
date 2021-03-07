@@ -1,7 +1,7 @@
 ﻿using Analys.Types;
 using NUnit.Framework;
-using Spare.Deco;
 using Spare.Logger;
+using static Palett.Presets.PresetCollection;
 
 namespace Analys.Test {
   [TestFixture]
@@ -33,15 +33,16 @@ namespace Analys.Test {
         "name",
         "day",
         "sold",
-        PivotMode.Average,
+        Pivoted.Average,
         null,
         x => x.Value
       );
       // rows.Deco().Logger();
       // var crostab = Crostab<Average>.Build(side, head, rows).Map(x => x.Value);
-      crostab.Side.Deco().Logger();
-      crostab.Head.Deco().Logger();
-      crostab.Rows.Deco().Logger();
+      // crostab.Side.Deco().Logger();
+      // crostab.Head.Deco().Logger();
+      // crostab.Rows.Deco().Logger();
+      crostab.Deco(presets: (Subtle, Fresh)).Logger();
     }
   }
 }

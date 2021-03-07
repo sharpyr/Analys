@@ -8,7 +8,7 @@ namespace Analys {
       string side,
       string head,
       string field,
-      PivotMode mode,
+      Pivoted mode,
       Func<object, dynamic> parser = null,
       Func<dynamic, TO> formula = null
     ) => Pivot<dynamic, dynamic>

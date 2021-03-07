@@ -9,7 +9,7 @@ namespace Analys.Test {
       string head,
       string side,
       string field,
-      PivotMode mode
+      Pivoted mode
     ) {
       var columnX = table.Column(side);
       var columnY = table.Column(head);

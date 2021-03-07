@@ -12,13 +12,15 @@ namespace Analys {
     private int _fieldIndex;
     private Func<TP, T, TP> _accum;
 
-    public static Pivot<dynamic, dynamic> Build(int side, int head, int field, PivotMode mode) {
-      var (init, accum) = mode.ModeToPreset();
+    public static Pivot<dynamic, dynamic> Build(int side, int head, int field, Pivoted mode) {
+      var (init, accum, conv) = mode.ModeToPreset();
       return new Pivot<dynamic, dynamic> {
         _sideIndex = side,
         _headIndex = head,
         _fieldIndex = field,
-        _accum = (target, value) => accum(target, value),
+        _accum = conv == null
+          ? (Func<dynamic, dynamic, dynamic>) ((target, value) => accum(target, value))
+          : (target, value) => accum(target, conv(value)),
         Init = () => init(),
         Side = new string[] { },
         Head = new string[] { },

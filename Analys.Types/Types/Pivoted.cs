@@ -1,13 +1,13 @@
 ﻿namespace Analys.Types {
-  public enum PivotMode {
+  public enum Pivoted {
     Merge,
     Accum,
     Count,
-    Incre,
+    Sum,
+    Average,
     Max,
     Min,
     First,
     Last,
-    Average,
   }
 }
