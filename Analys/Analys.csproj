@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.0.10</PackageVersion>
+    <PackageVersion>0.0.11</PackageVersion>
     <Title>Analys</Title>
     <Description>Table and Cross-table</Description>
     <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
@@ -10,15 +10,15 @@
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.0.10</AssemblyVersion>
-    <FileVersion>0.0.10</FileVersion>
+    <AssemblyVersion>0.0.11</AssemblyVersion>
+    <FileVersion>0.0.11</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj" />
-    <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj" />
-    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj" />
-    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
-    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
+    <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj"/>
+    <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj"/>
+    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj"/>
+    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
+    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
   </ItemGroup>
 </Project>
