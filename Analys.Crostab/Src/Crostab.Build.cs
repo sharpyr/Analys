@@ -1,6 +1,7 @@
 ﻿using System;
 using Typen;
-using Veho.Matrix;
+using Veho;
+using Veho.NestedVector;
 
 namespace Analys {
   public static class CrostabFactory {

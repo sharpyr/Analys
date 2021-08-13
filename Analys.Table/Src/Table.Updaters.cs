@@ -1,5 +1,5 @@
-﻿using Veho.Matrix.Columns;
-using Veho.Matrix.Rows;
+﻿using Veho.Columns;
+using Veho.Rows;
 
 namespace Analys {
   public partial class Table<T> {

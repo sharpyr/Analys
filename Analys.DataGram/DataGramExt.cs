@@ -1,4 +1,5 @@
-using Veho.Matrix;
+using Veho;
+using Veho.NestedVector;
 using Veho.Vector;
 
 namespace Analys {

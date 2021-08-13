@@ -1,5 +1,4 @@
-﻿using System;
-using Analys.Types;
+﻿using Analys.Types;
 using NUnit.Framework;
 using Spare.Logger;
 using Typen.Numeral;
@@ -65,3 +64,6 @@ namespace Analys.Test {
     }
   }
 }
+
+
+

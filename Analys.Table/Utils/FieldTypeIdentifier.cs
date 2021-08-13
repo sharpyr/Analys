@@ -1,5 +1,5 @@
 using Typen.Numeral;
-using Veho.Matrix.Columns;
+using Veho.Columns;
 using Veho.Vector;
 
 namespace Analys.Utils {

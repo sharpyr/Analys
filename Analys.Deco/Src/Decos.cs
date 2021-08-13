@@ -2,8 +2,9 @@
 using Palett.Types;
 using Spare.Padder;
 using Typen;
+using Veho;
 using Veho.Matrix;
-using Veho.Matrix.Rows;
+using Veho.Rows;
 using Veho.Types;
 using Veho.Vector;
 using static Texting.Enums.Chars;
