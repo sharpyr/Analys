@@ -14,10 +14,8 @@ namespace Analys {
 
     public T[] this[int x] => this.Rows.Row(x);
 
-    public T this[int x, string h] {
-      get => this.Rows[x, this.CoIn(h)];
-      set => this.Rows[x, this.CoIn(h)] = value;
-    }
+    public T this[int x, string h] { get => this.Rows[x, this.CoIn(h)]; set => this.Rows[x, this.CoIn(h)] = value; }
+    public T this[int x, int y] { get => this.Rows[x, y]; set => this.Rows[x, y] = value; }
 
     public T[] Column(string column) => this.Rows.Column(this.CoIn(column));
 
