@@ -18,8 +18,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="Typen" Version="0.0.12" />
-    <PackageReference Include="Veho.Matrix" Version="0.2.10" />
-    <PackageReference Include="Veho.Vector" Version="0.2.10" />
+    <PackageReference Include="Veho.Matrix" Version="0.2.12" />
+    <PackageReference Include="Veho.Vector" Version="0.2.12" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj" />
