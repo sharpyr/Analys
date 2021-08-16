@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.1.3</PackageVersion>
+    <PackageVersion>0.1.4</PackageVersion>
     <Title>Analys.Deco</Title>
     <Description>Deserialize Table and Crostab</Description>
     <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
@@ -10,8 +10,8 @@
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.1.3</AssemblyVersion>
-    <FileVersion>0.1.3</FileVersion>
+    <AssemblyVersion>0.1.4</AssemblyVersion>
+    <FileVersion>0.1.4</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Analys</RootNamespace>
   </PropertyGroup>
@@ -20,13 +20,13 @@
     <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Palett.Fluos" Version="0.1.19"/>
-    <PackageReference Include="Palett.Types" Version="0.1.19"/>
-    <PackageReference Include="Spare" Version="0.1.9"/>
+    <PackageReference Include="Palett.Fluos" Version="0.1.21"/>
+    <PackageReference Include="Palett.Types" Version="0.1.21"/>
+    <PackageReference Include="Spare" Version="0.1.10"/>
     <PackageReference Include="Texting" Version="0.1.0"/>
-    <PackageReference Include="Veho.Dictionary" Version="0.2.16"/>
-    <PackageReference Include="Veho.List" Version="0.2.16"/>
-    <PackageReference Include="Veho.Matrix" Version="0.2.16"/>
-    <PackageReference Include="Veho.Vector" Version="0.2.16"/>
+    <PackageReference Include="Veho.Dictionary" Version="0.2.18"/>
+    <PackageReference Include="Veho.List" Version="0.2.18"/>
+    <PackageReference Include="Veho.Matrix" Version="0.2.18"/>
+    <PackageReference Include="Veho.Vector" Version="0.2.18"/>
   </ItemGroup>
 </Project>
