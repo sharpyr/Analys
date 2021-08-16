@@ -1,13 +1,14 @@
 ﻿using Palett.Fluos;
 using Palett.Types;
 using Spare.Padder;
+using Texting.Enums;
+using Texting.Joiner;
 using Typen;
 using Veho;
 using Veho.Matrix;
 using Veho.Rows;
 using Veho.Types;
 using Veho.Vector;
-using static Texting.Enums.Chars;
 
 namespace Analys {
   public static class Decos {
@@ -24,9 +25,9 @@ namespace Analys {
       var body = matrix.Map(Conv.ToStr);
       if (presets.HasValue && (hasAnsi = true)) body = body.Fluo(orient, presets.Value, effects);
       return body
-        .Padder(hasAnsi)
-        .MapRows(row => t + row.Join())
-        .Join(",\n");
+             .Padder(hasAnsi)
+             .MapRows(row => t + row.Join(Strings.COSP))
+             .Join(Strings.COLF);
     }
     public static string Deco<T>(
       this Table<T> table,
@@ -37,7 +38,6 @@ namespace Analys {
       params Effect[] effects
     ) {
       if (!table.Rows.Any()) return "[]";
-      var t = new string(' ', tab * 2);
       var body = table.Map(Conv.ToStr);
       if (presets.HasValue && (hasAnsi = true)) {
         body.Head = body.Head.Fluo(presets.Value, effects);
@@ -50,7 +50,7 @@ namespace Analys {
       ).Acquire(
         rows.MapRows(row => row.Join(" | "))
       );
-      return lines.Map(x => t + x).Join(LF);
+      return lines.ContingentLines(Strings.LF, tab);
     }
 
     public static string Deco<T>(
@@ -62,7 +62,6 @@ namespace Analys {
       params Effect[] effects
     ) {
       if (!crostab.Rows.Any()) return "[]";
-      var t = new string(' ', tab * 2);
       var body = crostab.Map(Conv.ToStr);
       if (presets.HasValue && (hasAnsi = true)) {
         body.Side = body.Side.Fluo(presets.Value, effects);
@@ -80,7 +79,7 @@ namespace Analys {
           (s, r) => s + " | " + r
         )
       );
-      return lines.Map(x => t + x).Join(LF);
+      return lines.ContingentLines(Strings.LF, tab);
     }
   }
 }
