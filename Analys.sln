@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Mutable", "Analys.Mu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Mutable.Crostab", "Analys.Mutable.Crostab\Analys.Mutable.Crostab.csproj", "{8B7F2881-7E05-4374-AB3F-450412F762FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Convert", "Analys.Convert\Analys.Convert.csproj", "{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{8B7F2881-7E05-4374-AB3F-450412F762FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B7F2881-7E05-4374-AB3F-450412F762FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B7F2881-7E05-4374-AB3F-450412F762FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

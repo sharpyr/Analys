@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,14 +16,14 @@
     <RootNamespace>Analys</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Generic.Math" Version="1.0.2"/>
-    <PackageReference Include="Veho.Matrix" Version="0.2.12"/>
-    <PackageReference Include="Veho.Vector" Version="0.2.12"/>
+    <PackageReference Include="Generic.Math" Version="1.0.2" />
+    <PackageReference Include="Veho.Matrix" Version="0.2.16" />
+    <PackageReference Include="Veho.Vector" Version="0.2.16" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj"/>
-    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj"/>
-    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
-    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
+    <ProjectReference Include="..\Analys.DataGram\Analys.DataGram.csproj" />
+    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj" />
+    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
+    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
   </ItemGroup>
 </Project>

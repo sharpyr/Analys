@@ -1,6 +1,6 @@
 ﻿using Analys.Types;
 using NUnit.Framework;
-using Spare.Logger;
+using Spare;
 using Typen.Numeral;
 using static System.Double;
 using static Palett.Presets;
