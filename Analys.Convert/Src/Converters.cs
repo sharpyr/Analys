@@ -1,14 +1,14 @@
-﻿using Veho.List;
-using Veho.NestedVector;
+﻿using Veho.Mutable.Matrix;
+using Mu = Analys.Mutable;
 
-namespace Analys {
+namespace Analys.Convert {
   public static class Converters {
-    public static Table<T> MutableTableToTable<T>(this Mutable.Table<T> mutableTable) {
+    public static Table<T> ToTable<T>(this Mu::Table<T> mutableTable) {
       var head = mutableTable.Head;
       var rows = mutableTable.Rows;
       return Table<T>.Build(
         head.ToArray(),
-        rows.Map(row => row.ToArray()).ToArray().NestToMatrix()
+        rows.ToMatrix()
       );
     }
   }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Analys.Convert;
+using NUnit.Framework;
 using Spare;
 using Mu = Analys.Mutable;
 using Veho;
@@ -17,7 +18,7 @@ namespace Analys.Test {
           Li.From<object>(3, "BYD", 1250)
         )
       );
-      table.MutableTableToTable().Deco(presets: (Planet, Fresh)).Logger();
+      table.ToTable().Deco(presets: (Planet, Fresh)).Logger();
     }
 
     [Test]
