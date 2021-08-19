@@ -1,14 +1,14 @@
 ﻿namespace Analys.Types {
-  public struct Average {
+  public struct Avg {
     public double Sum { get; set; }
     public int Count { get; set; }
     public double Value => Count == 0 ? 0 : Sum / Count;
 
-    public Average Take(double num) {
+    public Avg Record(double num) {
       this.Sum += num;
       this.Count += 1;
       return this;
     }
-    public static Average Build() => new Average {Sum = 0, Count = 0};
+    public static Avg Build() => new Avg { Sum = 0, Count = 0 };
   }
 }

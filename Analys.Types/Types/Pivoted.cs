@@ -1,13 +1,11 @@
 ﻿namespace Analys.Types {
   public enum Pivoted {
-    Merge,
-    Accum,
+    // Merge,
+    // Accum,
     Count,
     Sum,
     Average,
-    Max,
-    Min,
-    First,
-    Last,
+    // Max,
+    // Min,
   }
 }
