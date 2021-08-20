@@ -1,5 +1,4 @@
-﻿using Analys.Convert;
-using Analys.Types;
+﻿using Analys.Types;
 using NUnit.Framework;
 using Spare;
 using Typen;

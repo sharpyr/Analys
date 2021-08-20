@@ -1,17 +1,9 @@
 ﻿using System;
 using Analys.Types;
-using Veho.Tuple;
 using Typen;
-using Acc = Analys.Pivot.Struct.Accumulators;
-using Init = Analys.Pivot.Struct.Initializers;
 
-namespace Analys.Convert {
+namespace Analys {
   public static class TableToCrostab {
-    public static (int side, int head, int field) GetIndexes<T>(
-      this Table<T> table,
-      (string side, string head, string field) fields
-    ) =>
-      fields.Map(table.CoIn);
 
     public static Crostab<double> Crostab(
       this Table<object> table,

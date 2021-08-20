@@ -5,12 +5,22 @@ using Veho.List;
 using Veho.Mutable.Matrix;
 using Mu = Analys.Mutable;
 
-namespace Analys.Convert {
+namespace Analys {
   public static class Converters {
     public static Table<T> ToTable<T>(this Mu::Table<T> mutableTable) {
       var head = mutableTable.Head;
       var rows = mutableTable.Rows;
       return Table<T>.Build(
+        head.ToArray(),
+        rows.ToMatrix()
+      );
+    }
+    public static Crostab<T> ToCrostab<T>(this Mu::Crostab<T> mutableTable) {
+      var head = mutableTable.Head;
+      var side = mutableTable.Side;
+      var rows = mutableTable.Rows;
+      return Crostab<T>.Build(
+        side.ToArray(),
         head.ToArray(),
         rows.ToMatrix()
       );
