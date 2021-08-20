@@ -19,7 +19,7 @@ namespace Analys.Convert {
       Pivoted mode,
       Func<object, double> parser = null
     ) {
-      if (parser == null) parser = Conv.Cast<object, double>;
+      if (parser == null) parser = Numeral.CastDouble;
       var indexes = table.GetIndexes(fields);
       switch (mode) {
         case Pivoted.Count: return PivotFactory.Count(indexes).Record(table.Rows, parser).ToCrostab(x => (double)x);

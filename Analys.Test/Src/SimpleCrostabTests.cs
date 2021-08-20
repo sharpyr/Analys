@@ -2,7 +2,7 @@
 using Analys.Types;
 using NUnit.Framework;
 using Spare;
-using Typen.Numeral;
+using Typen;
 using static System.Double;
 using static Palett.Presets;
 
@@ -37,7 +37,7 @@ namespace Analys.Test {
         crostab.Deco(presets: (Subtle, Fresh)).LogNext();
       }
       {
-        var crostab = table.Crostab(fields, Pivoted.Sum, parser: Num.CastDouble);
+        var crostab = table.Crostab(fields, Pivoted.Sum, parser: Numeral.CastDouble);
         crostab.Deco(presets: (Subtle, Fresh)).LogNext();
       }
       {

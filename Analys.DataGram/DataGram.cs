@@ -20,16 +20,16 @@ namespace Analys {
       Init = init
     };
     public int IndexSide(string x) {
-      var ri = this.Side.IndexOf(x);
+      var ri = Side.IndexOf(x);
       if (ri >= 0) return ri;
-      Ext.PushRow(ref this.Rows, Vec.Init(this.Rows.Width(), j => this.Init()));
-      return ri + Vec.Push(ref this.Side, x);
+      Ext.PushRow(ref Rows, Vec.Init(Rows.Width(), j => Init()));
+      return ri + Vec.Push(ref Side, x);
     }
     public int IndexHead(string y) {
-      var ci = this.Head.IndexOf(y);
+      var ci = Head.IndexOf(y);
       if (ci >= 0) return ci;
-      Ext.PushColumn(ref this.Rows, Vec.Init(this.Rows.Height(), i => this.Init()));
-      return ci + Vec.Push(ref this.Head, y);
+      Ext.PushColumn(ref Rows, Vec.Init(Rows.Height(), i => Init()));
+      return ci + Vec.Push(ref Head, y);
     }
   }
 }

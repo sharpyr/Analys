@@ -1,4 +1,5 @@
 ﻿using System;
+using Analys.Types;
 using Veho.Matrix;
 
 namespace Analys {
@@ -17,29 +18,40 @@ namespace Analys {
       };
     }
 
+    public static Pivot<double, IStat> Build((int side, int head, int field) fieldIndexes, Func<IStat> initializer) {
+      return new Pivot<double, IStat> {
+        Indexes = fieldIndexes,
+        Accumulator = StatExt.Record,
+        Init = initializer,
+        Side = new string[] { },
+        Head = new string[] { },
+        Rows = new IStat[][] { },
+      };
+    }
+
     public Pivot<TSample, TAccum> Record(TSample[,] samples) {
       for (int i = 0, h = samples.Height(); i < h; i++) {
-        var side = samples[i, this.Indexes.side].ToString();
-        var head = samples[i, this.Indexes.head].ToString();
-        var value = samples[i, this.Indexes.field];
-        this.Note(head, side, value);
+        var side = samples[i, Indexes.side].ToString();
+        var head = samples[i, Indexes.head].ToString();
+        var value = samples[i, Indexes.field];
+        Note(head, side, value);
       }
       return this;
     }
     public Pivot<TSample, TAccum> Record<TSource>(TSource[,] samples, Func<TSource, TSample> parser) {
       for (int i = 0, h = samples.Height(); i < h; i++) {
-        var side = samples[i, this.Indexes.side].ToString();
-        var head = samples[i, this.Indexes.head].ToString();
-        var value = parser(samples[i, this.Indexes.field]);
-        this.Note(head, side, value);
+        var side = samples[i, Indexes.side].ToString();
+        var head = samples[i, Indexes.head].ToString();
+        var value = parser(samples[i, Indexes.field]);
+        Note(head, side, value);
       }
       return this;
     }
     private TAccum Note(string head, string side, TSample value) {
-      var x = this.IndexSide(side);
-      var y = this.IndexHead(head);
-      var row = this.Rows[x];
-      return row[y] = this.Accumulator(row[y], value);
+      var x = IndexSide(side);
+      var y = IndexHead(head);
+      var row = Rows[x];
+      return row[y] = Accumulator(row[y], value);
     }
   }
 }

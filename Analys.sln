@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Mutable.Crostab", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Convert", "Analys.Convert\Analys.Convert.csproj", "{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Mutable.DataGram", "Analys.Mutable.DataGram\Analys.Mutable.DataGram.csproj", "{B6A2B833-DAC1-492B-A9C4-49F5A6BC7ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Mutable.Pivot", "Analys.Mutable.Pivot\Analys.Mutable.Pivot.csproj", "{F293393D-F0F9-47C1-A05E-DA139699C97B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +82,13 @@ Global
 		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E52BEF55-2D6D-470D-B361-5918C7ABC0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A2B833-DAC1-492B-A9C4-49F5A6BC7ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A2B833-DAC1-492B-A9C4-49F5A6BC7ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A2B833-DAC1-492B-A9C4-49F5A6BC7ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A2B833-DAC1-492B-A9C4-49F5A6BC7ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F293393D-F0F9-47C1-A05E-DA139699C97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F293393D-F0F9-47C1-A05E-DA139699C97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F293393D-F0F9-47C1-A05E-DA139699C97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F293393D-F0F9-47C1-A05E-DA139699C97B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,4 @@
-using Typen.Numeral;
+using Typen;
 using Veho.Columns;
 using Veho.Vector;
 

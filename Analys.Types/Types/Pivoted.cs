@@ -5,6 +5,10 @@
     Count,
     Sum,
     Average,
+    Var,
+    StDev,
+    Skew,
+    Kurt,
     // Max,
     // Min,
   }
