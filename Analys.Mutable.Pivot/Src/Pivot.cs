@@ -1,25 +1,28 @@
 ﻿using System;
-using Veho.Matrix;
+using System.Collections.Generic;
+using Veho.Mutable.Matrix;
 
-namespace Analys {
+namespace Analys.Mutable {
   public class Pivot<TAccum, TSample> : DataGram<TAccum> {
     public (int side, int head, int field) Indexes;
     public Func<TAccum, TSample, TAccum> Accumulator;
 
-    public Pivot<TAccum, TSample> Record(TSample[,] samples) {
+    public Pivot<TAccum, TSample> Record(List<List<TSample>> samples) {
       for (int i = 0, h = samples.Height(); i < h; i++) {
-        var side = samples[i, Indexes.side].ToString();
-        var head = samples[i, Indexes.head].ToString();
-        var value = samples[i, Indexes.field];
+        var sample = samples[i];
+        var side = sample[Indexes.side].ToString();
+        var head = sample[Indexes.head].ToString();
+        var value = sample[Indexes.field];
         Note(head, side, value);
       }
       return this;
     }
-    public Pivot<TAccum, TSample> Record<TSource>(TSource[,] samples, Func<TSource, TSample> parser) {
+    public Pivot<TAccum, TSample> Record<TSource>(List<List<TSource>> samples, Func<TSource, TSample> parser) {
       for (int i = 0, h = samples.Height(); i < h; i++) {
-        var side = samples[i, Indexes.side].ToString();
-        var head = samples[i, Indexes.head].ToString();
-        var value = parser(samples[i, Indexes.field]);
+        var sample = samples[i];
+        var side = sample[Indexes.side].ToString();
+        var head = sample[Indexes.head].ToString();
+        var value = parser(sample[Indexes.field]);
         Note(head, side, value);
       }
       return this;

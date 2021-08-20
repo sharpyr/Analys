@@ -1,6 +1,6 @@
 ﻿using static System.Double;
 
-namespace Analys.Types {
+namespace Analys.Stat.Gadget {
   public interface IStat {
     double Value { get; }
     IStat Record(double num);

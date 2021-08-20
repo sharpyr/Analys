@@ -32,17 +32,9 @@ namespace Analys.Test {
         }
       );
       var fields = ("name", "day", "sold");
-      {
-        var crostab = table.Crostab(fields, Pivoted.Average);
-        crostab.Deco(presets: (Subtle, Fresh)).LogNext();
-      }
-      {
-        var crostab = table.Crostab(fields, Pivoted.Sum, parser: Numeral.CastDouble);
-        crostab.Deco(presets: (Subtle, Fresh)).LogNext();
-      }
-      {
-        var crostab = table.Crostab(fields, Pivoted.Count);
-        crostab.Deco(presets: (Subtle, Fresh)).LogNext();
+      foreach (Pivoted mode in Enum<Pivoted>.Values) {
+        var crostab = table.Crostab(fields, mode);
+        crostab.Deco(presets: (Subtle, Fresh)).Says(mode.Label());
       }
     }
   }

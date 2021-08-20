@@ -8,8 +8,8 @@ namespace Analys {
     public string[] Side;
     public string[] Head;
     public T[][] Rows;
-    protected Func<T> Init;
-    
+    public Func<T> Init;
+
     // public DataGram<T>(string[] side, string[] head, T[][] rows, Func<T> init) {
     //   
     // }

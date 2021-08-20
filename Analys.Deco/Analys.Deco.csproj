@@ -22,11 +22,11 @@
   <ItemGroup>
     <PackageReference Include="Palett.Fluos" Version="0.2.2" />
     <PackageReference Include="Palett.Types" Version="0.2.2" />
-    <PackageReference Include="Spare" Version="0.1.14" />
+    <PackageReference Include="Spare" Version="0.1.17" />
     <PackageReference Include="Texting" Version="0.1.1" />
-    <PackageReference Include="Veho.Dictionary" Version="0.3.1" />
+    <PackageReference Include="Veho.Dictionary" Version="0.3.2" />
     <PackageReference Include="Veho.List" Version="0.2.18" />
-    <PackageReference Include="Veho.Matrix" Version="0.3.1" />
-    <PackageReference Include="Veho.Vector" Version="0.3.1" />
+    <PackageReference Include="Veho.Matrix" Version="0.3.2" />
+    <PackageReference Include="Veho.Vector" Version="0.3.2" />
   </ItemGroup>
 </Project>

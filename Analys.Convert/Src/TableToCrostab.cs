@@ -24,8 +24,7 @@ namespace Analys.Convert {
       switch (mode) {
         case Pivoted.Count: return PivotFactory.Count(indexes).Record(table.Rows, parser).ToCrostab(x => (double)x);
         case Pivoted.Sum: return PivotFactory.Sum(indexes).Record(table.Rows, parser).ToCrostab();
-        case Pivoted.Average: return PivotFactory.Average(indexes).Record(table.Rows, parser).ToCrostab(x => x.Value);
-        default: throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
+        default: return PivotFactory.Build(indexes, mode).Record(table.Rows, parser).ToCrostab(x => x.Value);
       }
     }
   }

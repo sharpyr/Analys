@@ -1,4 +1,4 @@
-﻿namespace Analys.Types {
+﻿namespace Analys.Stat.Gadget.Population {
   public struct Avg : IStat {
     public double Sum { get; set; }
     public int Count { get; set; }

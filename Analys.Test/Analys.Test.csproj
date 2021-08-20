@@ -7,12 +7,12 @@
         <PackageReference Include="NUnit" Version="3.13.2" />
         <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
-        <PackageReference Include="Spare.Deco" Version="0.1.14" />
-        <PackageReference Include="Spare.Logger" Version="0.1.14" />
-        <PackageReference Include="Veho.Dictionary" Version="0.3.1" />
+        <PackageReference Include="Spare.Deco" Version="0.1.17" />
+        <PackageReference Include="Spare.Logger" Version="0.1.17" />
+        <PackageReference Include="Veho.Dictionary" Version="0.3.2" />
         <PackageReference Include="Veho.List" Version="0.2.18" />
-        <PackageReference Include="Veho.Matrix" Version="0.3.1" />
-        <PackageReference Include="Veho.Vector" Version="0.3.1" />
+        <PackageReference Include="Veho.Matrix" Version="0.3.2" />
+        <PackageReference Include="Veho.Vector" Version="0.3.2" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\Analys.Convert\Analys.Convert.csproj" />
@@ -22,5 +22,8 @@
       <ProjectReference Include="..\Analys.Mutable.Table\Analys.Mutable.Table.csproj" />
       <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
       <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Src\Mutable" />
     </ItemGroup>
 </Project>

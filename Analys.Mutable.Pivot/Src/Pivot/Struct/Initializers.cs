@@ -1,6 +1,4 @@
-﻿using P = Analys.Stat.Gadget.Population;
-
-namespace Analys.Pivot.Struct {
+﻿namespace Analys.Mutable.Pivot.Struct {
   public static class Initializers {
     public static int Count() => 0;
     public static double Sum() => 0;

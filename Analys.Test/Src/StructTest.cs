@@ -1,4 +1,4 @@
-﻿using Analys.Types;
+﻿using Analys.Stat.Gadget.Population;
 using NUnit.Framework;
 using Spare;
 

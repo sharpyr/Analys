@@ -10,7 +10,7 @@ namespace Analys.Mutable {
     public List<string> Side;
     public List<string> Head;
     public List<List<T>> Rows;
-    protected Func<T> Init;
+    public Func<T> Init;
 
     public static DataGram<T> Build(Func<T> init) => new DataGram<T> {
       Side = new List<string>(),
@@ -30,7 +30,7 @@ namespace Analys.Mutable {
       var ci = Head.IndexOf(y);
       if (ci >= 0) return ci;
       var col = Seq.Init(Rows.Height(), i => Init());
-      Rows.PushColumn(col, 0);
+      Rows.PushColumn(col);
       Head.Add(y);
       return Head.Hi();
     }

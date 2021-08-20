@@ -31,7 +31,7 @@
 //         )
 //       );
 //       bistroDutyRoster.Deco().Logger();
-//       var crostab = bistroDutyRoster.ToCrostab(
+//       var crostab = bistroDutyRoster.Crostab(
 //         side: "name",
 //         head: "day",
 //         field: "served",
