@@ -1,6 +1,6 @@
 ﻿using static System.Math;
 
-namespace Analys.Stat.Gadget.Utils {
+namespace Analys.Stat.Utils {
   public static class MathExt {
     public static double P2(this double n) { return Pow(n, 2); }
     public static double P3(this double n) { return Pow(n, 3); }

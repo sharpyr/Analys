@@ -1,8 +1,8 @@
 ﻿using System;
-using Analys.Stat.Gadget.Population;
+using Analys.Stat.Population;
 using Analys.Types;
 
-namespace Analys.Stat.Gadget {
+namespace Analys.Stat {
   public static class GadgetFactory {
     public static Func<IStat> Build(Pivoted pivoted) {
       switch (pivoted) {

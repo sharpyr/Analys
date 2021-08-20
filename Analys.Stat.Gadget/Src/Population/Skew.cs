@@ -1,7 +1,7 @@
-﻿using Analys.Stat.Gadget.Utils;
+﻿using Analys.Stat.Utils;
 using static System.Math;
 
-namespace Analys.Stat.Gadget.Population {
+namespace Analys.Stat.Population {
   public struct Skew : IStat {
     public double SumCu;
     public double SumSq;

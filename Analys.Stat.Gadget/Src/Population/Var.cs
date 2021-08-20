@@ -1,6 +1,6 @@
-﻿using Analys.Stat.Gadget.Utils;
+﻿using Analys.Stat.Utils;
 
-namespace Analys.Stat.Gadget.Population {
+namespace Analys.Stat.Population {
   public struct Var : IStat {
     public double SumSq;
     public double Sum;

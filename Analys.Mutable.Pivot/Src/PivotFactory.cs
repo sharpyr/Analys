@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Analys.Stat.Gadget;
+using Analys.Stat;
 using Analys.Types;
 using Acc = Analys.Mutable.Pivot.Struct.Accumulators;
 using Init = Analys.Mutable.Pivot.Struct.Initializers;

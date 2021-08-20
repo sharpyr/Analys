@@ -1,10 +1,9 @@
 ﻿using System;
-using Analys.Stat.Gadget;
+using Analys.Stat;
 using Analys.Types;
 using Acc = Analys.Pivot.Struct.Accumulators;
 using Init = Analys.Pivot.Struct.Initializers;
 using FieldIndexes = System.ValueTuple<int, int, int>;
-using P = Analys.Stat.Gadget.Population;
 
 namespace Analys {
   public static class PivotFactory {
