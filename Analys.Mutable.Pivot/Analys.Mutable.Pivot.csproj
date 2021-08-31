@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,11 +16,11 @@
     <RootNamespace>Analys.Mutable</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Analys.Mutable.DataGram\Analys.Mutable.DataGram.csproj"/>
-    <ProjectReference Include="..\Analys.Stat.Gadget\Analys.Stat.Gadget.csproj"/>
-    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
+    <ProjectReference Include="..\Analys.Mutable.DataGram\Analys.Mutable.DataGram.csproj" />
+    <ProjectReference Include="..\Analys.Stat.Gadget\Analys.Stat.Gadget.csproj" />
+    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Veho.Mutable.Matrix" Version="0.3.2"/>
+    <PackageReference Include="Veho.Mutable.Matrix" Version="0.4.4" />
   </ItemGroup>
 </Project>
