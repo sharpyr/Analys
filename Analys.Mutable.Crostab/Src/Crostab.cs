@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using Veho.List;
 using Veho.Mutable.Matrix;
 
 namespace Analys.Mutable {
@@ -20,15 +18,5 @@ namespace Analys.Mutable {
 
     public int RoIn(string side) => Side.IndexOf(side);
     public int CoIn(string head) => Head.IndexOf(head);
-    public Crostab<TO> Map<TO>(Func<T, TO> fn) => Crostab<TO>.Build(
-      Side.Map(x => x),
-      Head.Map(x => x),
-      Rows.Map(fn)
-    );
-    public Crostab<TO> CastTo<TO>() => Crostab<TO>.Build(
-      Side.Map(x => x),
-      Head.Map(x => x),
-      Rows.CastTo<T, TO>()
-    );
   }
 }
