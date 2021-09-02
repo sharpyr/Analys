@@ -36,7 +36,6 @@ namespace Analys.Test.Mutable {
       );
       var crostab = MU.Crostab<string>.Build(labels.Map(x => x), labels.Map(x => x), rows);
       crostab.ToCrostab().Deco().Says("crostab");
-      var index = 0;
       foreach (var diagonalBlock in crostab.IntersectionalBlocks("+")) {
         diagonalBlock.ToCrostab().Deco().Says("diagonal");
       }

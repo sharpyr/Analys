@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Veho;
 using Veho.List;
+using Veho.Matrix;
 using Veho.Mutable.Matrix;
 using Mu = Analys.Mutable;
 
@@ -13,6 +15,16 @@ namespace Analys {
       return Table<T>.Build(
         head.ToArray(),
         rows.ToMatrix()
+      );
+    }
+    public static Mu::Crostab<T> ToMutableCrostab<T>(this Crostab<T> mutableTable) {
+      var head = mutableTable.Head;
+      var side = mutableTable.Side;
+      var rows = mutableTable.Rows;
+      return Mu::Crostab<T>.Build(
+        side.ToList(),
+        head.ToList(),
+        rows.ToMutableMatrix()
       );
     }
     public static Crostab<T> ToCrostab<T>(this Mu::Crostab<T> mutableTable) {
