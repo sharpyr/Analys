@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -16,17 +16,17 @@
     <RootNamespace>Analys</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj"/>
-    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
+    <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj" />
+    <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Palett.Fluos" Version="0.2.6"/>
-    <PackageReference Include="Palett.Types" Version="0.2.6"/>
-    <PackageReference Include="Spare" Version="0.1.19"/>
-    <PackageReference Include="Texting" Version="0.1.2"/>
-    <PackageReference Include="Veho.Dictionary" Version="0.4.4"/>
-    <PackageReference Include="Veho.List" Version="0.2.18"/>
-    <PackageReference Include="Veho.Matrix" Version="0.4.4"/>
-    <PackageReference Include="Veho.Vector" Version="0.4.4"/>
+    <PackageReference Include="Palett.Fluos" Version="0.2.7" />
+    <PackageReference Include="Palett.Types" Version="0.2.7" />
+    <PackageReference Include="Spare" Version="0.1.20" />
+    <PackageReference Include="Texting" Version="0.1.2" />
+    <PackageReference Include="Veho.Dictionary" Version="0.4.7" />
+    <PackageReference Include="Veho.List" Version="0.2.18" />
+    <PackageReference Include="Veho.Matrix" Version="0.4.7" />
+    <PackageReference Include="Veho.Vector" Version="0.4.7" />
   </ItemGroup>
 </Project>
