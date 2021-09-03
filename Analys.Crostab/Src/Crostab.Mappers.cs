@@ -17,11 +17,11 @@ namespace Analys {
     public void Iterate(Action<int, int, string, string, T> action) {
       this.Rows.Iterate((i, j, cell) => action(i, j, this.Side[i], this.Head[j], cell));
     }
-    public IEnumerable<(string, T[])> RowsIter() {
-      for (int i = 0, hi = this.Height; i < hi; i++) yield return (this.Side[i], this.Rows.Row(i));
+    public IEnumerable<(string, IEnumerable<T>)> RowsIntoIter() {
+      for (int i = 0, hi = this.Height; i < hi; i++) yield return (this.Side[i], this.Rows.RowIntoIter(i));
     }
-    public IEnumerable<(string, T[])> ColumnsIter() {
-      for (int j = 0, hi = this.Width; j < hi; j++) yield return (this.Head[j], this.Rows.Column(j));
+    public IEnumerable<(string, IEnumerable<T>)> ColumnsIntoIter() {
+      for (int j = 0, hi = this.Width; j < hi; j++) yield return (this.Head[j], this.Rows.ColumnIntoIter(j));
     }
     public Crostab<TO> CastTo<TO>() => Crostab<TO>.Build(
       (string[])Side.Clone(),
