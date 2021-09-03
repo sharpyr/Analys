@@ -7,8 +7,8 @@
         <PackageReference Include="NUnit" Version="3.13.2" />
         <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
-        <PackageReference Include="Spare.Deco" Version="0.1.24" />
-        <PackageReference Include="Spare.Logger" Version="0.1.24" />
+        <PackageReference Include="Spare.Deco" Version="0.1.25" />
+        <PackageReference Include="Spare.Logger" Version="0.1.25" />
         <PackageReference Include="Valjoux.Strategies" Version="0.0.5" />
         <PackageReference Include="Veho.Dictionary" Version="0.4.13" />
         <PackageReference Include="Veho.List" Version="0.2.18" />
