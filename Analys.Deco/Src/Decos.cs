@@ -1,6 +1,5 @@
 ﻿using Palett.Fluos;
 using Palett.Types;
-using Spare.Padder;
 using Texting.Enums;
 using Texting.Joiner;
 using Typen;
@@ -12,23 +11,23 @@ using Veho.Vector;
 
 namespace Analys {
   public static class Decos {
-    public static string Deco<T>(
-      this T[,] matrix,
-      byte tab = 1,
-      bool hasAnsi = false,
-      Operated orient = Operated.Rowwise,
-      (Preset, Preset)? presets = null,
-      params Effect[] effects
-    ) {
-      if (!matrix.Any()) return "[]";
-      var t = new string(' ', tab * 2);
-      var body = matrix.Map(Conv.ToStr);
-      if (presets.HasValue && (hasAnsi = true)) body = body.Fluo(orient, presets.Value, effects);
-      return body
-             .Padder(hasAnsi)
-             .MapRows(row => t + row.Join(Strings.COSP))
-             .Join(Strings.COLF);
-    }
+    // public static string Deco<T>(
+    //   this T[,] matrix,
+    //   byte tab = 1,
+    //   bool hasAnsi = false,
+    //   Operated orient = Operated.Rowwise,
+    //   (Preset, Preset)? presets = null,
+    //   params Effect[] effects
+    // ) {
+    //   if (!matrix.Any()) return "[]";
+    //   var t = new string(' ', tab * 2);
+    //   var body = matrix.Map(Conv.ToStr);
+    //   if (presets.HasValue && (hasAnsi = true)) body = body.Fluo(orient, presets.Value, effects);
+    //   return body
+    //          .Padder(hasAnsi)
+    //          .MapRows(row => t + row.Join(Strings.COSP))
+    //          .Join(Strings.COLF);
+    // }
     public static string Deco<T>(
       this Table<T> table,
       byte tab = 1,
