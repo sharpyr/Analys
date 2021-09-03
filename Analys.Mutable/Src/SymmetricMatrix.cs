@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Veho.Mutable.Matrix;
 using Veho.Sequence;
-using Veho.Mutable.LinearAlgebra;
-using Mu = Veho.Mutable.LinearAlgebra;
+using Mu = Veho.Mutable.Matrix;
 
-namespace Analys.Mutable.LinearAlgebra {
+namespace Analys.Mutable {
   public static class SymmetricMatrix {
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<int> indices) {
       return Crostab<T>.Build(

@@ -1,9 +1,9 @@
-﻿using NUnit.Framework;
+﻿using Analys.Mutable;
+using NUnit.Framework;
 using Spare;
 using Veho;
 using Veho.List;
 using MU = Analys.Mutable;
-using Analys.Mutable.LinearAlgebra;
 
 namespace Analys.Test.Mutable {
   [TestFixture]
