@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
+using Veho.Columns;
 using Veho.Matrix;
+using Veho.Rows;
 
 namespace Analys {
   public partial class Crostab<T> {
@@ -15,8 +18,15 @@ namespace Analys {
       get => Rows[RoIn(s), CoIn(h)];
       set => Rows[RoIn(s), CoIn(h)] = value;
     }
-
     public int RoIn(string s) => Array.IndexOf(Side, s);
     public int CoIn(string h) => Array.IndexOf(Head, h);
+    public IEnumerable<T> Row(string side) {
+      var index = this.RoIn(side);
+      return index >= 0 ? this.Rows.Row(index) : null;
+    }
+    public IEnumerable<T> Column(string head) {
+      var index = this.RoIn(head);
+      return index >= 0 ? this.Rows.Column(index) : null;
+    }
   }
 }
