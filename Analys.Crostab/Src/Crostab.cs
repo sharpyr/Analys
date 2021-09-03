@@ -18,9 +18,5 @@ namespace Analys {
 
     public int RoIn(string s) => Array.IndexOf(Side, s);
     public int CoIn(string h) => Array.IndexOf(Head, h);
-    public Crostab<TO> Map<TO>(Func<T, TO> fn) =>
-      Crostab<TO>.Build((string[]) Side.Clone(), (string[]) Head.Clone(), Rows.Map(fn));
-    public Crostab<TO> CastTo<TO>() => Crostab<TO>.Build((string[]) Side.Clone(), (string[]) Head.Clone(),
-      Rows.CastTo<T, TO>());
   }
 }
