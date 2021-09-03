@@ -20,11 +20,11 @@ namespace Analys {
     }
     public int RoIn(string s) => Array.IndexOf(Side, s);
     public int CoIn(string h) => Array.IndexOf(Head, h);
-    public IEnumerable<T> Row(string side) {
+    public T[] Row(string side) {
       var index = this.RoIn(side);
       return index >= 0 ? this.Rows.Row(index) : null;
     }
-    public IEnumerable<T> Column(string head) {
+    public T[] Column(string head) {
       var index = this.RoIn(head);
       return index >= 0 ? this.Rows.Column(index) : null;
     }
