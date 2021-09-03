@@ -17,6 +17,15 @@ namespace Analys {
     public void Iterate(Action<int, int, string, string, T> action) {
       this.Rows.Iterate((i, j, cell) => action(i, j, this.Side[i], this.Head[j], cell));
     }
+  
+    public IEnumerable<T> RowIntoIter(string side) {
+      var index = this.RoIn(side);
+      return index >= 0 ? this.Rows.RowIntoIter(index) : null;
+    }
+    public IEnumerable<T> ColumnIntoIter(string head) {
+      var index = this.RoIn(head);
+      return index >= 0 ? this.Rows.ColumnIntoIter(index) : null;
+    }
     public IEnumerable<(string, IEnumerable<T>)> RowsIntoIter() {
       for (int i = 0, hi = this.Height; i < hi; i++) yield return (this.Side[i], this.Rows.RowIntoIter(i));
     }
