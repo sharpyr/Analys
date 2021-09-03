@@ -6,12 +6,20 @@ using Veho.Sequence;
 using Mu = Veho.Mutable.Matrix;
 
 namespace Analys.Mutable {
-  public static class SymmetricMatrix {
+  public static class SymmetricCrostab {
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<int> indices) {
       return Crostab<T>.Build(
         crostab.Side.SelectBy(indices),
         crostab.Head.SelectBy(indices),
         Mu::SymmetricMatrix.SelectBy(crostab.Rows, indices)
+      );
+    }
+    public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<string> labels) {
+      var indices = labels.Map(x => crostab.Side.IndexOf(x));
+      return Crostab<T>.Build(
+        labels.ToList(),
+        labels.ToList(),
+        crostab.Rows.SelectBy(indices).Map(row => row.SelectBy(indices))
       );
     }
     public static Crostab<T> UpperTriangular<T>(Crostab<T> crostab) {
@@ -35,7 +43,7 @@ namespace Analys.Mutable {
         rowSkipper.AcquireIndices(intersectionalIndices);
         if (intersectionalIndices.Count <= 1) continue;
         // common.Deco().Says(index.ToString());
-        yield return SymmetricMatrix.SelectBy(crostab, intersectionalIndices);
+        yield return SymmetricCrostab.SelectBy(crostab, intersectionalIndices);
       }
     }
   }
