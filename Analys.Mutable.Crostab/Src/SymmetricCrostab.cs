@@ -37,14 +37,9 @@ namespace Analys.Mutable {
       );
     }
     public static IEnumerable<Crostab<T>> IntersectionalBlocks<T>(this Crostab<T> crostab, T signal) where T : IEquatable<T> {
-      var rowSkipper = Skipper<List<T>>.Build(crostab.Rows);
-      foreach (var index in rowSkipper.IntoIndexIter()) {
-        var intersectionalIndices = crostab.Rows.FindIntersectional(index, signal).ToList();
-        rowSkipper.AcquireIndices(intersectionalIndices);
-        if (intersectionalIndices.Count <= 1) continue;
-        // common.Deco().Says(index.ToString());
-        yield return SymmetricCrostab.SelectBy(crostab, intersectionalIndices);
-      }
+      return crostab.Rows
+                    .IntersectionalIndices(signal)
+                    .Select(intersectionalIndices => SymmetricCrostab.SelectBy(crostab, intersectionalIndices.ToList()));
     }
   }
 }
