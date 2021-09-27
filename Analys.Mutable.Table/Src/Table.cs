@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Analys.Mutable.Utils;
 using Veho.Mutable.Columns;
 
@@ -19,5 +20,6 @@ namespace Analys.Mutable {
     public List<T> Column(string column) => Rows.Column(CoIn(column));
 
     public int CoIn(string head) => Head.IndexOf(head);
+    public int CoIn(Regex headRegex) => Head.FindIndex(headRegex.IsMatch);
   }
 }
