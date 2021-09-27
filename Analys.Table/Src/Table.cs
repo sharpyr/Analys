@@ -1,7 +1,10 @@
 using System;
+using System.Linq;
+using System.Text.RegularExpressions;
 using Veho.Columns;
 using Veho.Matrix;
 using Veho.Rows;
+using Veho.Sequence;
 
 namespace Analys {
   public partial class Table<T> {
@@ -20,5 +23,6 @@ namespace Analys {
     public T[] Column(string column) => Rows.Column(CoIn(column));
 
     public int CoIn(string h) => Array.IndexOf(Head, h);
+    public int CoIn(Regex headRegex) => this.Head.FindIndex(headRegex.IsMatch);
   }
 }
