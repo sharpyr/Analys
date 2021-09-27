@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Veho.Columns;
 using Veho.Matrix;
 using Veho.Rows;
@@ -14,9 +13,13 @@ namespace Analys {
     public int Height => Rows.Height();
     public int Width => Rows.Width();
 
-    public T this[string s, string h] {
-      get => Rows[RoIn(s), CoIn(h)];
-      set => Rows[RoIn(s), CoIn(h)] = value;
+    public T this[string sideLabel, string headLabel] {
+      get => Rows[RoIn(sideLabel), CoIn(headLabel)];
+      set => Rows[RoIn(sideLabel), CoIn(headLabel)] = value;
+    }
+    public T this[int x, int y] {
+      get => Rows[x, y];
+      set => Rows[x, y] = value;
     }
     public int RoIn(string s) => Array.IndexOf(Side, s);
     public int CoIn(string h) => Array.IndexOf(Head, h);
