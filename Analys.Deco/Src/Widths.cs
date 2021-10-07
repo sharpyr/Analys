@@ -1,6 +1,5 @@
 ﻿using System;
-using Texting.Lange;
-using Texting.Padder;
+using Texting;
 using Veho.Columns;
 using Veho.Vector;
 using Veho.Matrix;
