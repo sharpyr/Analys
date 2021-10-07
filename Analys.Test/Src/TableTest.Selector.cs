@@ -13,7 +13,7 @@ namespace Analys.Test {
     public static IEnumerable<T[]> IntoRowsIter2<T>(this Table<T> crostab, params Regex[] headLabels) {
       var indices = headLabels.Map(crostab.CoIn);
       indices.Deco().Says("indices");
-      return Selectors.IntoRowsIter(crostab.Rows, indices);
+      return Selectors.SelectRowsIntoIter(crostab.Rows, indices);
     }
   }
 
@@ -26,7 +26,7 @@ namespace Analys.Test {
         (3, 4).Init((x, y) => x * 10 + y)
       );
       var labels = Vec.From("foo", "zen");
-      foreach (var values in table.IntoRowsIter(labels)) {
+      foreach (var values in table.SelectRowsIntoIter(labels)) {
         var (foo, zen) = values.T2();
         Console.WriteLine($">> [foo] {foo} [bar] {zen}");
       }

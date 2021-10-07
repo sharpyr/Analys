@@ -12,13 +12,13 @@ namespace Analys {
     public T[,] SelectOf(params string[] headLabels) {
       return this.SelectBy(headLabels);
     }
-    public IEnumerable<T[]> IntoRowsIter(params string[] headLabels) {
+    public IEnumerable<T[]> SelectRowsIntoIter(params string[] headLabels) {
       var indices = headLabels.Map(this.CoIn);
-      return this.Rows.IntoRowsIter(indices);
+      return this.Rows.SelectRowsIntoIter(indices);
     }
-    public IEnumerable<T[]> IntoRowsIter(params Regex[] headLabels) {
+    public IEnumerable<T[]> SelectRowsIntoIter(params Regex[] headLabels) {
       var indices = headLabels.Map(this.CoIn);
-      return this.Rows.IntoRowsIter(indices);
+      return this.Rows.SelectRowsIntoIter(indices);
     }
   }
 }
