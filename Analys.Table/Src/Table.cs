@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 using Veho.Columns;
 using Veho.Matrix;
@@ -7,7 +6,7 @@ using Veho.Rows;
 using Veho.Sequence;
 
 namespace Analys {
-  public partial class Table<T> {
+  public partial class Table<T> : IDict<string, T[]> {
     public string[] Head;
     public T[,] Rows;
 
