@@ -2,7 +2,7 @@
 using static System.Double;
 
 namespace Analys.Test.Assets {
-  public static class TableCollection {
+  public static partial class TableCollection {
     public static Table<object> BoratTable = Table<object>.Build(
       Vec.From("day", "name", "kpi", "qtt", "adt"),
       Mat.From(

@@ -5,7 +5,7 @@ using Typen;
 using static System.Double;
 using static Palett.Presets;
 
-namespace Analys.Test {
+namespace Analys.Test.Crostab {
   [TestFixture]
   public class SimpleCrostabTests {
     [Test]
