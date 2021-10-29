@@ -29,5 +29,7 @@
     &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.TableTest_Selector.BetaTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.TableCalculatorTest.TableCalculatorTestAlpha&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.TableTest_Selector&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.Crostab.AlgebraicTableTests.AlgebraicExcelTableTestAlpha&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.Crostab.AlgebraicTableTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

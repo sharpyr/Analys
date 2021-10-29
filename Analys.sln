@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Mutable.Pivot", "Ana
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Stat.Gadget", "Analys.Stat.Gadget\Analys.Stat.Gadget.csproj", "{0DAE00B1-63D2-4716-BA72-4DEE122FCCF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.VSTO.Table", "Analys.VSTO.Table\Analys.VSTO.Table.csproj", "{B03ABF49-7901-41DB-8E59-CB83A3B0A69E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{0DAE00B1-63D2-4716-BA72-4DEE122FCCF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DAE00B1-63D2-4716-BA72-4DEE122FCCF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DAE00B1-63D2-4716-BA72-4DEE122FCCF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03ABF49-7901-41DB-8E59-CB83A3B0A69E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03ABF49-7901-41DB-8E59-CB83A3B0A69E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03ABF49-7901-41DB-8E59-CB83A3B0A69E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03ABF49-7901-41DB-8E59-CB83A3B0A69E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
