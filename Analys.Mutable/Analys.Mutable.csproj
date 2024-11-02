@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.2.7</PackageVersion>
+    <PackageVersion>0.2.8</PackageVersion>
     <Title>Analys.Mutable</Title>
     <Description>Mutable table and crostab</Description>
     <PackageTags>Statistics, Table, CrosTab, Cross-table</PackageTags>
@@ -10,10 +10,11 @@
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.2.7</AssemblyVersion>
-    <FileVersion>0.2.7</FileVersion>
+    <AssemblyVersion>0.2.8</AssemblyVersion>
+    <FileVersion>0.2.8</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Analys.Mutable</RootNamespace>
+    <PackageIcon>analys-avatar.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Analys.Mutable.Crostab\Analys.Mutable.Crostab.csproj"/>
@@ -24,5 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Src"/>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\media\analys-avatar.png" Pack="true" PackagePath=""/>
+    <None Include="..\README.md" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>

@@ -1,6 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AArray_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F6dadd22e019742ce80aaefef99855be0142288_003Fbc_003Fe624cad4_003FArray_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AInfo_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fb9c18cc4eaf84eae83e88bd8922ac3239600_003Ff1_003Fb80a792b_003FInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ASelectors_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FAppData_003FRoaming_003FJetBrains_003FRider2024_002E2_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Ff2ec1fe5099d4fbc8db6e0746d8a98048400_003F2e_003F45b070b7_003FSelectors_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/home/hazen/.nuget/packages/generic.math/1.0.2/lib/netstandard1.3/Generic.Math.dll" /&gt;
   &lt;Assembly Path="/snap/dotnet-sdk/current/packs/Microsoft.NETCore.App.Ref/5.0.0/ref/net5.0/System.Data.Common.dll" /&gt;
@@ -33,5 +34,6 @@
     &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.TableTest_Selector&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.Crostab.AlgebraicTableTests.AlgebraicExcelTableTestAlpha&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.Crostab.AlgebraicTableTests&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::2F149067-0B87-4A9D-98B3-0293DA633682::.NETFramework,Version=v4.7.2::Analys.Test.Crostab.SimpleCrostabTests.SimpleTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
