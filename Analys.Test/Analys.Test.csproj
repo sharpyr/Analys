@@ -24,6 +24,5 @@
       <ProjectReference Include="..\Analys.Mutable.Table\Analys.Mutable.Table.csproj" />
       <ProjectReference Include="..\Analys.Table\Analys.Table.csproj" />
       <ProjectReference Include="..\Analys.Types\Analys.Types.csproj" />
-      <ProjectReference Include="..\Analys.VSTO.Table\Analys.VSTO.Table.csproj" />
     </ItemGroup>
 </Project>
