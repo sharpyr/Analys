@@ -15,11 +15,11 @@ namespace Analys.Mutable {
     }
     public IEnumerable<List<T>> IntoRowsIter(params string[] headLabels) {
       var indices = headLabels.Map(this.CoIn);
-      return this.Rows.IntoRowsIter(indices);
+      return this.Rows.SelectRowsIntoIter(indices);
     }
     public IEnumerable<List<T>> IntoRowsIter(params Regex[] headLabels) {
       var indices = headLabels.Map(this.CoIn);
-      return this.Rows.IntoRowsIter(indices);
+      return this.Rows.SelectRowsIntoIter(indices);
     }
   }
 }

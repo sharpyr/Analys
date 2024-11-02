@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Spare;
 using Veho;
-using Veho.List;
+using Veho.Sequence;
 using MU = Analys.Mutable;
 
 namespace Analys.Test.Mutable {

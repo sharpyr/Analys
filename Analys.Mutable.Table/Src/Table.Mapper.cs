@@ -1,5 +1,5 @@
 ﻿using System;
-using Veho.List;
+using Veho.Sequence;
 using Veho.Mutable.Matrix;
 
 namespace Analys.Mutable {

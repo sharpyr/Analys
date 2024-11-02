@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Veho.List;
+using Veho.Sequence;
 
 namespace Analys.Mutable {
   public partial class Table<T> {

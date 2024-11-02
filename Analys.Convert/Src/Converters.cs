@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Veho;
-using Veho.List;
+using Veho.Sequence;
 using Veho.Matrix;
 using Veho.Mutable.Matrix;
 using Mu = Analys.Mutable;
