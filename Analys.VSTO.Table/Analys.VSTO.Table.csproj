@@ -3,9 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageVersion>0.2.9</PackageVersion>
-    <Title>Analys.DataGram</Title>
-    <Description>Cross-table class</Description>
-    <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
+    <Title>Analys.VSTO.Table</Title>
+    <Description>VSTO Table Extension</Description>
+    <PackageTags>VSTO, Statistics, CrosTab, Cross-table</PackageTags>
     <Authors>Hoyeung Wong</Authors>
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
@@ -17,8 +17,12 @@
     <PackageIcon>analys-avatar.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Veho.Matrix" Version="0.5.12"/>
-    <PackageReference Include="Veho.Vector" Version="0.5.12" />
+    <ProjectReference Include="..\Analys.Convert\Analys.Convert.csproj"/>
+    <ProjectReference Include="..\Analys.Pivot\Analys.Pivot.csproj"/>
+    <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aryth.Calculator" Version="0.2.23"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\media\analys-avatar.png" Pack="true" PackagePath=""/>
