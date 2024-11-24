@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.2.10</PackageVersion>
+    <PackageVersion>0.2.11</PackageVersion>
     <Title>Analys.Types</Title>
     <Description>Types and Enums for Analys</Description>
     <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
@@ -10,8 +10,8 @@
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.2.10</AssemblyVersion>
-    <FileVersion>0.2.10</FileVersion>
+    <AssemblyVersion>0.2.11</AssemblyVersion>
+    <FileVersion>0.2.11</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RootNamespace>Analys</RootNamespace>
     <PackageIcon>analys-avatar.png</PackageIcon>
@@ -19,7 +19,7 @@
   <ItemGroup>
     <PackageReference Include="Generic.Math" Version="1.0.2"/>
     <PackageReference Include="Typen" Version="0.1.1"/>
-    <PackageReference Include="Veho.Vector" Version="0.6.1" />
+    <PackageReference Include="Veho.Vector" Version="0.6.1"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\media\analys-avatar.png" Pack="true" PackagePath=""/>
