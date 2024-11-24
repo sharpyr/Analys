@@ -21,13 +21,13 @@
     <ProjectReference Include="..\Analys.Table\Analys.Table.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Palett.Fluos" Version="0.4.13"/>
-    <PackageReference Include="Palett.Types" Version="0.4.13"/>
+    <PackageReference Include="Palett.Fluos" Version="0.4.14" />
+    <PackageReference Include="Palett.Types" Version="0.4.14" />
     <PackageReference Include="Spare" Version="0.2.6"/>
     <PackageReference Include="Texting" Version="0.1.10"/>
-    <PackageReference Include="Veho.Dictionary" Version="0.5.13"/>
-    <PackageReference Include="Veho.Matrix" Version="0.5.13"/>
-    <PackageReference Include="Veho.Vector" Version="0.5.13"/>
+    <PackageReference Include="Veho.Dictionary" Version="0.6.1" />
+    <PackageReference Include="Veho.Matrix" Version="0.6.1" />
+    <PackageReference Include="Veho.Vector" Version="0.6.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\media\analys-avatar.png" Pack="true" PackagePath=""/>

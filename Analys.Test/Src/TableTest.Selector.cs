@@ -6,14 +6,14 @@ using Spare;
 using Veho;
 using Veho.Vector;
 using static System.Text.RegularExpressions.RegexOptions;
-using Selectors = Veho.Rows.Selectors;
+using Selector = Veho.Rows.Selector;
 
 namespace Analys.Test {
   public static class Util {
     public static IEnumerable<T[]> IntoRowsIter2<T>(this Table<T> crostab, params Regex[] headLabels) {
       var indices = headLabels.Map(crostab.CoIn);
       indices.Deco().Says("indices");
-      return Selectors.SelectRowsIntoIter(crostab.Rows, indices);
+      return Selector.SelectRowsIntoIter(crostab.Rows, indices);
     }
   }
 

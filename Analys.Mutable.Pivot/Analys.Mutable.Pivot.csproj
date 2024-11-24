@@ -22,7 +22,7 @@
     <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Veho.Mutable.Matrix" Version="0.5.13"/>
+    <PackageReference Include="Veho.Mutable.Matrix" Version="0.6.1" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\media\analys-avatar.png" Pack="true" PackagePath=""/>

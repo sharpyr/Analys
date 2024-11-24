@@ -18,8 +18,8 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Generic.Math" Version="1.0.2"/>
-    <PackageReference Include="Veho.Matrix" Version="0.5.13"/>
-    <PackageReference Include="Veho.Vector" Version="0.5.13"/>
+    <PackageReference Include="Veho.Matrix" Version="0.6.1" />
+    <PackageReference Include="Veho.Vector" Version="0.6.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Analys.Crostab\Analys.Crostab.csproj"/>

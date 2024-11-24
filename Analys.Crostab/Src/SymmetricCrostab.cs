@@ -11,7 +11,7 @@ namespace Analys {
       return Crostab<T>.Build(
         crostab.Side.SelectBy(indices),
         crostab.Head.SelectBy(indices),
-        SymmetricMatrix.SelectBy(crostab.Rows, indices)
+        Symmetric.SelectBy(crostab.Rows, indices)
       );
     }
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<string> labels) {
@@ -22,14 +22,14 @@ namespace Analys {
       return Crostab<T>.Build(
         crostab.Side.Slice(),
         crostab.Head.Slice(),
-        SymmetricMatrix.UpperTriangular(crostab.Rows)
+        Symmetric.UpperTriangular(crostab.Rows)
       );
     }
     public static Crostab<T> LowerTriangular<T>(Crostab<T> crostab) {
       return Crostab<T>.Build(
         crostab.Side.Slice(),
         crostab.Head.Slice(),
-        SymmetricMatrix.LowerTriangular(crostab.Rows)
+        Symmetric.LowerTriangular(crostab.Rows)
       );
     }
     public static IEnumerable<Crostab<T>> IntersectionalBlocks<T>(this Crostab<T> crostab, T signal) where T : IEquatable<T> {

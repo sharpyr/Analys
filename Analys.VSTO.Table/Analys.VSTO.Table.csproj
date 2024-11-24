@@ -22,7 +22,7 @@
     <ProjectReference Include="..\Analys.Types\Analys.Types.csproj"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Calculator" Version="0.2.24"/>
+    <PackageReference Include="Aryth.Calculator" Version="0.3.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\media\analys-avatar.png" Pack="true" PackagePath=""/>
