@@ -4,7 +4,7 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Aryth.Calculator" Version="0.3.0" />
+    <PackageReference Include="Aryth.Calculator" Version="0.3.2" />
     <PackageReference Include="NUnit" Version="4.2.2"/>
     <PackageReference Include="Spare.Deco" Version="0.2.6"/>
     <PackageReference Include="Spare.Logger" Version="0.2.6" />
