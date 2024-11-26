@@ -3,7 +3,13 @@ using Analys.Histogram;
 using NUnit.Framework;
 
 namespace Analys.Test.Histogram {
-
+  public static partial class Util {
+    public static bool Hold<T>(this (T min, T max) bin, T value) where T : IComparable<T> {
+      Console.WriteLine($">> [{bin.min} compare to {value}] {bin.min.CompareTo(value)} [{value} compare to {bin.max}] {value.CompareTo(bin.max)}");
+      return bin.min.CompareTo(value) <= 0 && value.CompareTo(bin.max) <= 0;
+    }
+    public static bool Allow<T>(this (T min, T max) bin, T value) where T : IComparable<T> => bin.min.CompareTo(value) < 0 && value.CompareTo(bin.max) < 0;
+  }
 
   [TestFixture]
   public class BinTest {

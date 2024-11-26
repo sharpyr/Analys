@@ -351,6 +351,7 @@ namespace Analys.Test.Histogram {
       bound.ToVector().Deco().Says("bound");
       scales.Deco().Says("tick labels");
       var histo = Histogram<double>.Build(scales);
+      histo.Bins.Deco().Says("bins");
       histo += list;
       var pop = histo.Population;
       Console.WriteLine($">> [population] {pop}");

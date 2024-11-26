@@ -20,8 +20,8 @@ namespace Analys.Histogram {
     // public static bool Equals<T>(this (T x, T y) a, (T x, T y) b) => Equal(a.x, b.x) && Equal(a.y, b.y);
 
     public static bool Equals<T>(this (T x, T y) a, (T x, T y) b) where T : IComparable<T> => a.x.CompareTo(b.x) == 0 && a.y.CompareTo(b.y) == 0;
-    public static bool Hold<T>(this (T min, T max) bin, T value) where T : IComparable<T> => bin.min.CompareTo(value) >= 0 && value.CompareTo(bin.max) >= 0;
-    public static bool Allow<T>(this (T min, T max) bin, T value) where T : IComparable<T> => bin.min.CompareTo(value) > 0 && value.CompareTo(bin.max) > 0;
+    public static bool Hold<T>(this (T min, T max) bin, T value) where T : IComparable<T> => bin.min.CompareTo(value) <= 0 && value.CompareTo(bin.max) <= 0;
+    public static bool Allow<T>(this (T min, T max) bin, T value) where T : IComparable<T> => bin.min.CompareTo(value) < 0 && value.CompareTo(bin.max) < 0;
 
     public static string ToStr<T>(this (T min, T max) bin, Open open = Open.None) {
       var lr = open.Decode();

@@ -8,7 +8,7 @@ using Veho.Vector;
 using static Aryth.Math;
 
 namespace Analys.Test.Histogram {
-  public static class Util {
+  public static partial class Util {
     public static double Percentile(double[] vec, double percent) {
       Array.Sort(vec);
       var len = vec.Length;

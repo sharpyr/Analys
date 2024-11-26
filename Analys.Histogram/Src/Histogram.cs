@@ -7,7 +7,6 @@ using static Analys.Histogram.Bins;
 
 namespace Analys {
   public class Histogram<T> where T : IComparable<T> {
-    public string[] Keys;
     public (T min, T max)[] Bins;
     public List<T>[] Rows;
 
