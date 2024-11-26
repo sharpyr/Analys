@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Stat.Gadget", "Analy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.VSTO.Table", "Analys.VSTO.Table\Analys.VSTO.Table.csproj", "{4760CAAF-A91B-418D-A31D-43582696D223}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analys.Histogram", "Analys.Histogram\Analys.Histogram.csproj", "{C84E438E-2098-43E0-80BF-BFC642A8F8DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +104,9 @@ Global
 		{4760CAAF-A91B-418D-A31D-43582696D223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4760CAAF-A91B-418D-A31D-43582696D223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4760CAAF-A91B-418D-A31D-43582696D223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C84E438E-2098-43E0-80BF-BFC642A8F8DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C84E438E-2098-43E0-80BF-BFC642A8F8DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C84E438E-2098-43E0-80BF-BFC642A8F8DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C84E438E-2098-43E0-80BF-BFC642A8F8DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
