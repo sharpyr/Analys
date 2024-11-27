@@ -1,10 +1,9 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Reflection;
+using System.Text;
+using NUnit.Framework;
 
 namespace Analys.Test {
-  using System;
-  using System.Reflection;
-  using System.Text;
-
   public static class JonSkeetLib {
     public static Func<T, object, object> MagicMethod<T>(MethodInfo method) where T : class {
       // First fetch the generic form

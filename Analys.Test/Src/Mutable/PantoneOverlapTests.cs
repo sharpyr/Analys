@@ -34,7 +34,7 @@ namespace Analys.Test.Mutable {
         "Zinnia",
         "Sahara"
       );
-      var crostab = MU.Crostab<string>.Build(labels.Map(x => x), labels.Map(x => x), rows);
+      var crostab = Mu::Crostab<string>.Build(labels.Map(x => x), labels.Map(x => x), rows);
       crostab.ToCrostab().Deco().Says("crostab");
       foreach (var diagonalBlock in crostab.IntersectionalBlocks("+")) {
         diagonalBlock.ToCrostab().Deco().Says("diagonal");

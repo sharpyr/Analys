@@ -4,7 +4,6 @@ using System.Linq;
 using Veho.Matrix;
 using Veho.Vector;
 
-
 namespace Analys {
   public static class SymmetricCrostab {
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<int> indices) {
@@ -16,7 +15,7 @@ namespace Analys {
     }
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<string> labels) {
       var indices = labels.Map(x => crostab.Side.IndexOf(x));
-      return SymmetricCrostab.SelectBy(crostab, indices);
+      return SelectBy(crostab, indices);
     }
     public static Crostab<T> UpperTriangular<T>(Crostab<T> crostab) {
       return Crostab<T>.Build(
@@ -35,7 +34,7 @@ namespace Analys {
     public static IEnumerable<Crostab<T>> IntersectionalBlocks<T>(this Crostab<T> crostab, T signal) where T : IEquatable<T> {
       return crostab.Rows
                     .IntersectionalIndices(signal)
-                    .Select(intersectionalIndices => SymmetricCrostab.SelectBy(crostab, intersectionalIndices.ToList()));
+                    .Select(intersectionalIndices => SelectBy(crostab, intersectionalIndices.ToList()));
     }
   }
 }

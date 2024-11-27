@@ -1,5 +1,4 @@
 ﻿using System;
-using Analys.Histogram;
 using NUnit.Framework;
 
 namespace Analys.Test.Histogram {

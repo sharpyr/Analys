@@ -1,6 +1,6 @@
 ﻿using System;
-using Veho.Sequence;
 using Veho.Mutable.Matrix;
+using Veho.Sequence;
 
 namespace Analys.Mutable {
   public partial class Table<T> {

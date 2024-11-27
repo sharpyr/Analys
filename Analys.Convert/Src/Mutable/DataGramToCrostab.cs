@@ -5,12 +5,12 @@ using Mu = Analys.Mutable;
 
 namespace Analys.Mutable {
   public static class DataGramToCrostab {
-    public static Mu::Crostab<T> ToCrostab<T>(this Mu::DataGram<T> dataGram) => Mu::Crostab<T>.Build(
+    public static Crostab<T> ToCrostab<T>(this DataGram<T> dataGram) => Crostab<T>.Build(
       dataGram.Side,
       dataGram.Head,
       dataGram.Rows
     );
-    public static Mu::Crostab<TO> ToCrostab<T, TO>(this Mu::DataGram<T> dataGram, Func<T, TO> conv = null) => Mu::Crostab<TO>.Build(
+    public static Crostab<TO> ToCrostab<T, TO>(this DataGram<T> dataGram, Func<T, TO> conv = null) => Crostab<TO>.Build(
       dataGram.Side,
       dataGram.Head,
       dataGram.Rows.Map(conv ?? Conv.Cast<T, TO>)

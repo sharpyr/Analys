@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Veho.Matrix;
 using Veho.Mutable.Matrix;
+using Veho.Sequence;
 using Veho.Tuple;
+using Convert = Veho.Tuple.Convert;
 using Mu = Analys.Mutable;
 
 namespace Analys {
@@ -39,20 +41,20 @@ namespace Analys {
     public static Mu::Table<T> MapToTable<T>(this List<(T, T)> entries, Func<(T, T), List<T>> conv, (string, string) head) {
       return Mu::Table<T>.Build(
         head.List(),
-        Veho.Sequence.Mapper.Map(entries, conv)
+        Mapper.Map(entries, conv)
       );
     }
     public static Mu::Table<T> MapToTable<T>(this List<(T, T, T)> entries, Func<(T, T, T), List<T>> conv, (string, string, string) head) {
       return Mu::Table<T>.Build(
         head.List(),
-        Veho.Sequence.Mapper.Map(entries, conv)
+        Mapper.Map(entries, conv)
       );
     }
     public static Mu::Table<T> ToTable<T>(this List<(T, T)> entries, (string, string) head) {
-      return entries.MapToTable(Veho.Tuple.Convert.List, head);
+      return entries.MapToTable(Convert.List, head);
     }
     public static Mu::Table<T> ToTable<T>(this List<(T, T, T)> entries, (string, string, string) head) {
-      return entries.MapToTable(Veho.Tuple.Convert.List, head);
+      return entries.MapToTable(Convert.List, head);
     }
   }
 }

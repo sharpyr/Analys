@@ -6,13 +6,13 @@ namespace Analys.Stat {
   public static class GadgetFactory {
     public static Func<IStat> Build(Pivoted pivoted) {
       switch (pivoted) {
-        case Pivoted.Count: return GadgetFactory.Avg;
-        case Pivoted.Sum: return GadgetFactory.Avg;
-        case Pivoted.Average: return GadgetFactory.Avg;
-        case Pivoted.Var: return GadgetFactory.Var;
-        case Pivoted.StDev: return GadgetFactory.StDev;
-        case Pivoted.Skew: return GadgetFactory.Skew;
-        case Pivoted.Kurt: return GadgetFactory.Kurt;
+        case Pivoted.Count: return Avg;
+        case Pivoted.Sum: return Avg;
+        case Pivoted.Average: return Avg;
+        case Pivoted.Var: return Var;
+        case Pivoted.StDev: return StDev;
+        case Pivoted.Skew: return Skew;
+        case Pivoted.Kurt: return Kurt;
         default: throw new ArgumentOutOfRangeException(nameof(pivoted), pivoted, null);
       }
     }

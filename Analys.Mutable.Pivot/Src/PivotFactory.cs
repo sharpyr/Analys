@@ -33,7 +33,7 @@ namespace Analys.Mutable {
                                     Rows = new List<List<IStat>>(),
                                   };
 
-    public static Pivot<int, double> Count(FieldIndexes indexes) => PivotFactory.Build<int, double>(indexes, Init.Count, Acc.Count);
-    public static Pivot<double, double> Sum(FieldIndexes indexes) => PivotFactory.Build<double, double>(indexes, Init.Sum, Acc.Sum);
+    public static Pivot<int, double> Count(FieldIndexes indexes) => Build<int, double>(indexes, Init.Count, Acc.Count);
+    public static Pivot<double, double> Sum(FieldIndexes indexes) => Build<double, double>(indexes, Init.Sum, Acc.Sum);
   }
 }

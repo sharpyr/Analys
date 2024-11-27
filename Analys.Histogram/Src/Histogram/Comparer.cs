@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Analys.Histogram {
+﻿namespace Analys.Histogram {
   /// <summary>
   /// a.CompareTo(b)
   /// 1: a smaller than b,

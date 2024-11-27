@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using Spare;
-using Mu = Analys.Mutable;
 using Veho;
+using Mu = Analys.Mutable;
 using static Palett.Presets;
 
 namespace Analys.Test {

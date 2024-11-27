@@ -1,12 +1,12 @@
-﻿using Analys.Types;
-using Mu = Analys.Mutable;
+﻿using Analys.Mutable;
+using Analys.Types;
 using NUnit.Framework;
 using Spare;
 using Typen;
 using Veho;
+using Mu = Analys.Mutable;
 using static System.Double;
 using static Palett.Presets;
-using Analys.Mutable;
 
 namespace Analys.Test.Mutable {
   [TestFixture]

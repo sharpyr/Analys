@@ -1,8 +1,8 @@
 ﻿using System;
 using Texting;
 using Veho.Columns;
-using Veho.Vector;
 using Veho.Matrix;
+using Veho.Vector;
 
 namespace Analys {
   public static class WidthGetters {

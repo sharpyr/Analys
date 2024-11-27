@@ -6,8 +6,9 @@ using Aryth;
 using Typen;
 using Veho.Matrix;
 using Veho.Vector;
+using Math = System.Math;
 
-namespace Analys.VSTO {
+namespace Analys {
   public class ExcelTable<T> : Table<T> {
     public Dictionary<string, (FieldType type, FieldStatus status)> FieldInfos =
       new Dictionary<string, (FieldType type, FieldStatus status)>();
@@ -62,9 +63,9 @@ namespace Analys.VSTO {
       if (sideSamples == null || headSamples == null || fieldSamples == null) return null;
       switch (mode) {
         case Pivoted.Count:
-          return PivotFactory.Count().Record(sideSamples, headSamples, fieldSamples).ToCrostab(x => (double) x);
-        case Pivoted.Sum: return PivotFactory.Sum().Record(sideSamples, headSamples, fieldSamples).ToCrostab();
-        default: return PivotFactory.Build(mode).Record(sideSamples, headSamples, fieldSamples).ToCrostab(x => x.Value);
+          return VSTO.PivotFactory.Count().Record(sideSamples, headSamples, fieldSamples).ToCrostab(x => (double) x);
+        case Pivoted.Sum: return VSTO.PivotFactory.Sum().Record(sideSamples, headSamples, fieldSamples).ToCrostab();
+        default:          return VSTO.PivotFactory.Build(mode).Record(sideSamples, headSamples, fieldSamples).ToCrostab(x => x.Value);
       }
     }
   }
@@ -88,7 +89,7 @@ namespace Analys.VSTO {
           return value!=null;
         }
         var operatorParser =
-          TryParserFactory.MakeMethodParser(typeof(Crostab<double>), typeof(double), typeof(System.Math));
+          TryParserFactory.MakeMethodParser(typeof(Crostab<double>), typeof(double), typeof(Math));
         var calculator = AlgebraCalculator.Build(OperandParser, operatorParser);
         var result = calculator.Calculate(formula);
         return result as Crostab<double>;

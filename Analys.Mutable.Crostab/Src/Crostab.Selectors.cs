@@ -7,7 +7,7 @@ namespace Analys.Mutable {
     public Crostab<T> SelectBy(IReadOnlyList<string> side, IReadOnlyList<string> head) {
       var sideIndices = side.Map(x => this.Side.IndexOf(x));
       var headIndices = head.Map(x => this.Head.IndexOf(x));
-      return Crostab<T>.Build(
+      return Build(
         side.ToList(),
         head.ToList(),
         this.Rows.SelectListBy(sideIndices).Map(row => row.SelectListBy(headIndices))

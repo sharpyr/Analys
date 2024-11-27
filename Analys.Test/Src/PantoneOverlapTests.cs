@@ -2,7 +2,6 @@
 using Spare;
 using Veho;
 using Veho.Vector;
-using MU = Analys.Mutable;
 
 namespace Analys.Test {
   [TestFixture]

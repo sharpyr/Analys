@@ -2,17 +2,17 @@
 
 namespace Analys {
   public partial class Crostab<T> {
-    public static Crostab<T> operator +(Crostab<T> a, Crostab<T> b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Addition(a.Rows, b.Rows));
-    public static Crostab<T> operator -(Crostab<T> a, Crostab<T> b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Subtraction(a.Rows, b.Rows));
-    public static Crostab<T> operator *(Crostab<T> a, Crostab<T> b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Multiply(a.Rows, b.Rows));
-    public static Crostab<T> operator /(Crostab<T> a, Crostab<T> b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Division(a.Rows, b.Rows));
-    public static Crostab<T> operator ^(Crostab<T> a, Crostab<T> b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Concatenate(a.Rows, b.Rows));
+    public static Crostab<T> operator +(Crostab<T> a, Crostab<T> b) => Build(a.Side, a.Head, LinearSpace<T>.op_Addition(a.Rows, b.Rows));
+    public static Crostab<T> operator -(Crostab<T> a, Crostab<T> b) => Build(a.Side, a.Head, LinearSpace<T>.op_Subtraction(a.Rows, b.Rows));
+    public static Crostab<T> operator *(Crostab<T> a, Crostab<T> b) => Build(a.Side, a.Head, LinearSpace<T>.op_Multiply(a.Rows, b.Rows));
+    public static Crostab<T> operator /(Crostab<T> a, Crostab<T> b) => Build(a.Side, a.Head, LinearSpace<T>.op_Division(a.Rows, b.Rows));
+    public static Crostab<T> operator ^(Crostab<T> a, Crostab<T> b) => Build(a.Side, a.Head, LinearSpace<T>.op_Concatenate(a.Rows, b.Rows));
 
-    public static Crostab<T> operator +(Crostab<T> a, T b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Addition(a.Rows, b));
-    public static Crostab<T> operator -(Crostab<T> a, T b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Subtraction(a.Rows, b));
-    public static Crostab<T> operator *(Crostab<T> a, T b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Multiply(a.Rows, b));
-    public static Crostab<T> operator /(Crostab<T> a, T b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Division(a.Rows, b));
-    public static Crostab<T> operator ^(Crostab<T> a, T b) => Crostab<T>.Build(a.Side, a.Head, LinearSpace<T>.op_Concatenate(a.Rows, b));
+    public static Crostab<T> operator +(Crostab<T> a, T b) => Build(a.Side, a.Head, LinearSpace<T>.op_Addition(a.Rows, b));
+    public static Crostab<T> operator -(Crostab<T> a, T b) => Build(a.Side, a.Head, LinearSpace<T>.op_Subtraction(a.Rows, b));
+    public static Crostab<T> operator *(Crostab<T> a, T b) => Build(a.Side, a.Head, LinearSpace<T>.op_Multiply(a.Rows, b));
+    public static Crostab<T> operator /(Crostab<T> a, T b) => Build(a.Side, a.Head, LinearSpace<T>.op_Division(a.Rows, b));
+    public static Crostab<T> operator ^(Crostab<T> a, T b) => Build(a.Side, a.Head, LinearSpace<T>.op_Concatenate(a.Rows, b));
 
     // public static Crostab<T> operator +(T a, Crostab<T> b) => Crostab<T>.Build(b.Side, b.Head, LinearSpace.Add(a.Rows, b));
     // public static Crostab<T> operator -(T a, Crostab<T> b) => Crostab<T>.Build(b.Side, b.Head, LinearSpace.Subtract(a.Rows, b));

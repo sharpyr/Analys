@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Veho.Mutable.Matrix;
 using Veho.Sequence;
-using Mu = Veho.Mutable.Matrix;
 
 namespace Analys.Mutable {
   public static class SymmetricCrostab {
