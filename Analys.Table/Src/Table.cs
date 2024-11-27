@@ -3,7 +3,6 @@ using System.Text.RegularExpressions;
 using Veho.Columns;
 using Veho.Matrix;
 using Veho.Rows;
-using Veho.Sequence;
 
 namespace Analys {
   public partial class Table<T> : IDict<string, T[]> {
@@ -22,6 +21,6 @@ namespace Analys {
     public T[] Column(string column) => Rows.Column(CoIn(column));
 
     public int CoIn(string h) => Array.IndexOf(Head, h);
-    public int CoIn(Regex headRegex) => this.Head.FindIndex(headRegex.IsMatch);
+    public int CoIn(Regex headRegex) => Array.FindIndex(this.Head, headRegex.IsMatch);
   }
 }

@@ -10,7 +10,7 @@ namespace Analys.Mutable {
       return Crostab<T>.Build(
         side.ToList(),
         head.ToList(),
-        this.Rows.SelectBy(sideIndices).Map(row => row.SelectBy(headIndices))
+        this.Rows.SelectListBy(sideIndices).Map(row => row.SelectListBy(headIndices))
       );
     }
   }

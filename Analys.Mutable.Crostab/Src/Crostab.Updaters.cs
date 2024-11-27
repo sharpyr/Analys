@@ -47,7 +47,7 @@ namespace Analys.Mutable {
       if (y == 0) return this;
       var column = this.Rows.Column(y);
       this.Head.RemoveAt(y);
-      this.Rows.Iterate(row => row.RemoveAt(y));
+      this.Rows.IterateList(row => row.RemoveAt(y));
       return this.UnshiftColumn(label, column);
     }
   }

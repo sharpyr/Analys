@@ -27,7 +27,7 @@ namespace Analys.Test {
       );
       var labels = Vec.From("foo", "zen");
       foreach (var values in table.SelectRowsIntoIter(labels)) {
-        var (foo, zen) = values.T2();
+        var (foo, zen) = values.Dualet();
         Console.WriteLine($">> [foo] {foo} [bar] {zen}");
       }
     }
@@ -49,7 +49,7 @@ namespace Analys.Test {
         new Regex(@"comment", regOpt)
       );
       foreach (var values in table.IntoRowsIter2(labelRegexes)) {
-        var (head, field, formula, preset, unknown) = values.T5();
+        var (head, field, formula, preset, unknown) = values.Pentlet();
         Console.WriteLine($">> head {head}, field {field}, formula {formula}, preset {preset} unknown {unknown}");
       }
     }

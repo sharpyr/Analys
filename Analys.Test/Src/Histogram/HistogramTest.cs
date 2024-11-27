@@ -5,6 +5,7 @@ using Aryth.Bounds;
 using NUnit.Framework;
 using Spare;
 using Veho;
+using Veho.Tuple;
 
 namespace Analys.Test.Histogram {
   [TestFixture]
@@ -348,7 +349,7 @@ namespace Analys.Test.Histogram {
       var list = GDPPCs;
       var bound = list.Bound() ?? (0, 0);
       var scales = Aryth.Scaler.NiceLabels(bound);
-      bound.ToVector().Deco().Says("bound");
+      bound.Vec().Deco().Says("bound");
       scales.Deco().Says("tick labels");
       var histo = Histogram<double>.Build(scales);
       histo.Bins.Deco().Says("bins");

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Veho;
 using Veho.Mutable.Columns;
 using Veho.Mutable.Matrix;
-using Veho.Sequence;
 
 namespace Analys.Mutable {
   public class DataGram<T> {
@@ -13,18 +12,18 @@ namespace Analys.Mutable {
     public Func<T> Init;
 
     public static DataGram<T> Build(Func<T> init) => new DataGram<T> {
-      Side = new List<string>(),
-      Head = new List<string>(),
-      Rows = new List<List<T>>(),
-      Init = init
-    };
+                                                                       Side = new List<string>(),
+                                                                       Head = new List<string>(),
+                                                                       Rows = new List<List<T>>(),
+                                                                       Init = init
+                                                                     };
     public int IndexSide(string x) {
       var ri = Side.IndexOf(x);
       if (ri >= 0) return ri;
       var row = Seq.Init(Rows.Width(), j => Init());
       Rows.Add(row);
       Side.Add(x);
-      return Side.Hi();
+      return Side.Count - 1;
     }
     public int IndexHead(string y) {
       var ci = Head.IndexOf(y);
@@ -32,7 +31,7 @@ namespace Analys.Mutable {
       var col = Seq.Init(Rows.Height(), i => Init());
       Rows.PushColumn(col);
       Head.Add(y);
-      return Head.Hi();
+      return Head.Count - 1;
     }
   }
 }

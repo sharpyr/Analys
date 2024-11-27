@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Analys.Histogram;
 using Typen;
-using Veho.Sequence;
+using Veho.Vector;
 
 namespace Analys.Vector {
   public static partial class Stat {

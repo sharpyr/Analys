@@ -8,7 +8,7 @@ namespace Analys.Mutable {
       return this;
     }
     public Table<T> PushColumn(List<T> vec) {
-      Rows.Iterate((i, row) => row.Add(vec[i]));
+      Rows.IterateList((i, row) => row.Add(vec[i]));
       return this;
     }
   }

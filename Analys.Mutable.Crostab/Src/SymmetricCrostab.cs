@@ -9,9 +9,9 @@ namespace Analys.Mutable {
   public static class SymmetricCrostab {
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<int> indices) {
       return Crostab<T>.Build(
-        crostab.Side.SelectBy(indices),
-        crostab.Head.SelectBy(indices),
-        Mu::SymmetricMatrix.SelectBy(crostab.Rows, indices)
+        crostab.Side.SelectListBy(indices),
+        crostab.Head.SelectListBy(indices),
+        SymmetricMatrix.SelectBy(crostab.Rows, indices)
       );
     }
     public static Crostab<T> SelectBy<T>(Crostab<T> crostab, IReadOnlyList<string> labels) {
@@ -19,27 +19,27 @@ namespace Analys.Mutable {
       return Crostab<T>.Build(
         labels.ToList(),
         labels.ToList(),
-        crostab.Rows.SelectBy(indices).Map(row => row.SelectBy(indices))
+        crostab.Rows.SelectListBy(indices).Map(row => row.SelectListBy(indices))
       );
     }
     public static Crostab<T> UpperTriangular<T>(Crostab<T> crostab) {
       return Crostab<T>.Build(
         crostab.Side.Slice(),
         crostab.Head.Slice(),
-        Mu::SymmetricMatrix.UpperTriangular(crostab.Rows)
+        SymmetricMatrix.UpperTriangular(crostab.Rows)
       );
     }
     public static Crostab<T> LowerTriangular<T>(Crostab<T> crostab) {
       return Crostab<T>.Build(
         crostab.Side.Slice(),
         crostab.Head.Slice(),
-        Mu::SymmetricMatrix.LowerTriangular(crostab.Rows)
+        SymmetricMatrix.LowerTriangular(crostab.Rows)
       );
     }
     public static IEnumerable<Crostab<T>> IntersectionalBlocks<T>(this Crostab<T> crostab, T signal) where T : IEquatable<T> {
       return crostab.Rows
                     .IntersectionalIndices(signal)
-                    .Select(intersectionalIndices => SymmetricCrostab.SelectBy(crostab, intersectionalIndices.ToList()));
+                    .Select(intersectionalIndices => SelectBy(crostab, intersectionalIndices.ToList()));
     }
   }
 }
