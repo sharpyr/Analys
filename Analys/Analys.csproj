@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.2.16</PackageVersion>
+    <PackageVersion>0.2.17</PackageVersion>
     <Title>Analys</Title>
     <Description>Table and Cross-table</Description>
     <PackageTags>Statistics, CrosTab, Cross-table</PackageTags>
@@ -10,8 +10,8 @@
     <Company>Hoyeung Wong</Company>
     <Copyright>Copyright (c) Hoyeung Wong 2020-present</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.2.16</AssemblyVersion>
-    <FileVersion>0.2.16</FileVersion>
+    <AssemblyVersion>0.2.17</AssemblyVersion>
+    <FileVersion>0.2.17</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageIcon>analys-avatar.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
