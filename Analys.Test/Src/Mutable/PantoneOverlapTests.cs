@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Spare;
 using Veho;
 using Veho.Sequence;
-using MU = Analys.Mutable;
+using Mu = Analys.Mutable;
 
 namespace Analys.Test.Mutable {
   [TestFixture]

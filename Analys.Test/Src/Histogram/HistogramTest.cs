@@ -1,7 +1,6 @@
 ﻿using System;
 using Analys.Vector;
 using Aryth;
-using Aryth.Bounds;
 using NUnit.Framework;
 using Spare;
 using Veho.Tuple;
@@ -344,10 +343,11 @@ namespace Analys.Test.Histogram {
                                       30545.45,
                                     };
     [Test]
+    [Obsolete("Obsolete")]
     public void Test() {
       var list = GDPPCs;
       var bound = list.Bound() ?? (0, 0);
-      var scales = Scaler.NiceLabels(bound);
+      var scales = bound.NiceLabels();
       bound.Vec().Deco().Says("bound");
       scales.Deco().Says("tick labels");
       var histo = Histogram<double>.Build(scales);
